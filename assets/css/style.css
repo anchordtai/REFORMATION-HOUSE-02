@@ -15,7 +15,7 @@ body {
 }
 
 a {
-  color: #4431f5;
+  color: #7f0bf3;
   text-decoration: none;
 }
 
@@ -26,7 +26,7 @@ a:hover {
 .crh-logo {
   font-size: 40px;
   position: relative;
-  margin-right:100px; 
+  margin-right:50px; 
   
   
 }
@@ -132,7 +132,7 @@ h6 {
 
 #header.header-scrolled,
 #header.header-inner-pages {
-  background: rgba(54, 40, 180, 0.8);
+  background: rgba(18, 18, 18, 0.8);
   padding: 12px 0;
 }
 
@@ -179,6 +179,16 @@ h6 {
 .navbar>ul>li {
   padding: 10px 0 10px 24px;
 }
+/* search web */
+
+
+.search-web {
+
+  
+  
+}
+  
+
 
 .navbar a,
 .navbar a:focus {
@@ -315,6 +325,7 @@ h6 {
     left: -100%;
   }
 }
+/* ===== */
 
 /**
 * Mobile Navigation 
@@ -327,10 +338,10 @@ h6 {
   line-height: 0;
   transition: 0.5s;
 }
-
+@media (min-width: 222px)
 @media (max-width: 991px) {
   .mobile-nav-toggle {
-    display: block;
+    display: menu;
   }
 
   .navbar ul {
@@ -431,7 +442,8 @@ h6 {
   display: block;
 }
 
-/*--------------------------------------------------------------
+/*-------------/*
+
 # Hero Section
 --------------------------------------------------------------*/
 #hero {
@@ -448,11 +460,11 @@ h6 {
 
 #hero h1 {
   margin: 0;
-   font-size: 45px;
+   font-size: 40px;
    font-family: "poppin" sans-serif;
   font-weight: 700;
   
-  line-height: 75px;
+  line-height: 60px;
   color: #fff;
 }
 
@@ -1671,3 +1683,6 @@ section {
 
 /* element style */
 
+.gallery,p {
+  text-align: center;
+}

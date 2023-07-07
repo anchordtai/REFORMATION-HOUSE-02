@@ -1,7 +1,35 @@
-<head></head>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
+    <title>Donate Page</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+    rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+    crossorigin="anonymous">
 
-
+    <!-- reCAPTCHA -->
+    <head>
+        <script src="https://www.google.com/recaptcha/enterprise.js?render=6LeQku8mAAAAAEaTUlYzMzwER629BaTCZI5ub0r-"></script>
+        ...
+      </head>
+      
+      <script>
+        function onClick(e) {
+          e.preventDefault();
+          grecaptcha.enterprise.ready(async () => {
+            const token = await grecaptcha.enterprise.execute('6LeQku8mAAAAAEaTUlYzMzwER629BaTCZI5ub0r-', {action: 'LOGIN'});
+            // IMPORTANT: The 'token' that results from execute is an encrypted response sent by
+            // reCAPTCHA Enterprise to the end user's browser.
+            // This token must be validated by creating an assessment.
+            // See https://cloud.google.com/recaptcha-enterprise/docs/create-assessment
+          });
+        }
+      </script>
+  </head>
 <style>
 
   h1  {
@@ -203,7 +231,7 @@ block
 
 .mainView .pack:nth-child(1) {
     /* background: url(/assets/images/mainbg.jpg); */
-    /* background: url(https://cdn.pixabay.com/photo/2020/07/15/03/49/praying-5406270__340.jpg); */
+    background: url(https://cdn.pixabay.com/photo/2020/07/15/03/49/praying-5406270__340.jpg);
     background-size: cover;
 }
 
@@ -17640,7 +17668,26 @@ block
     </div>
     <div class="packRight uk-width-1-2@m uk-width-1-1@xs pack">
 
-        <div class="content" id="formControlHolder" data-is="paymentform2"><div class="paymentForm"> <form class="aceUIValidate" name="thePaymentForm" id="thePaymentForm" callback="initPayment"> <div class="banks"> <div class="bank tcenter" title="UBA powered by Interswitch"> <div class="cover"></div> <img alt="" class="base15" src="/assets/images/uba.png"> <input type="radio" name="bank" class="left full tcenter top5 radioPicker" value="4"> <label class="left full smfont">Interswitch</label> <label class="currencies tcenter left full smfont green-text text-darken-3">[  NGN,  USD,  GBP ]</label> </div><div class="bank tcenter" title="GT Bank powered by GTPay"> <div class="cover"></div> <img alt="" class="base15" src="/assets/images/gtb.png"> <input type="radio" name="bank" class="left full tcenter top5 radioPicker" value="3"> <label class="left full smfont">GTPay</label> <label class="currencies tcenter left full smfont green-text text-darken-3">[  NGN ]</label> </div><div class="bank tcenter" title="Xcel powered by Xcel"> <div class="cover"></div> <img alt="" class="base15" src="/assets/images/xcel.png"> <input type="radio" name="bank" class="left full tcenter top5 radioPicker" value="10"> <label class="left full smfont">Xcel</label> <label class="currencies tcenter left full smfont green-text text-darken-3">[  NGN ]</label> </div><div class="bank tcenter" title="Paystack powered by Paystack"> <div class="cover"></div> <img alt="" class="base15" src="paystack.png"> <input type="radio" name="bank" class="left full tcenter top5 radioPicker" value="11"> <label class="left full smfont">Paystack</label> <label class="currencies tcenter left full smfont green-text text-darken-3">[  NGN,  USD ]</label> </div><div class="bank tcenter" title="Covenant MFB powered by Paystack"> <div class="cover"></div> <img alt="" class="base15" src="/assets/images/cmfb.png"> <input type="radio" name="bank" class="left full tcenter top5 radioPicker" value="12"> <label class="left full smfont">Paystack</label> <label class="currencies tcenter left full smfont green-text text-darken-3">[  NGN ]</label> </div> </div> <em class="smfont left full tcenter"> Please note, any of the listed channels can accept your card </em> <div class="banksControl">  <div class="uk-width-1-4 left top15 base15 currencyHolder"> <label class="mdfont grey-text mdfont">Currency</label> <select class="required uk-select" name="currency"> <option selected="" disabled="" value="">Currency</option> <option value="1">Nigerian Naira</option><option value="2">United States Dollar</option><option value="3">Great Britain Pounds</option> </select> <input type="hidden" name="targetBank" id="targetBank" class="required number" value="4"> </div> <div class="uk-width-3-4 top15 base15 amountHolder right"> <label class="mdfont grey-text mdfont">Amount</label> <input type="text" class="uk-input required number" name="amount"> </div> <div class="uk-width-1-1 top15 base15"> <label class="mdfont grey-text mdfont">Offering Type</label> <select class="uk-select required" name="offering"> <option selected="" disabled="" value="">Select Offering Type</option> <option value="1">General Offering</option><option value="2">Tithe</option><option value="3">Thanksgiving Offering</option><option value="4">Shiloh Sacrifice</option><option value="5">Mission Adoption Scheme</option><option value="6">Prophet Offering</option><option value="7">The Ark Project</option><option value="8">Rural Church Building</option><option value="9">Transport Offering</option> </select> </div> <div class="uk-width-1-1@m uk-width-1-2@l top15 base15 left"> <label class="mdfont grey-text mdfont">Firstname</label> <input type="text" class="uk-input required profileInputs odd" name="firstname"> </div> <div class="uk-width-1-1@m uk-width-1-2@l top15 base15 right"> <label class="mdfont grey-text mdfont">Lastname</label> <input type="text" class="uk-input required profileInputs even" name="lastname"> </div> <div class="uk-width-1-1@m uk-width-1-2@l top15 base15 left"> <label class="mdfont grey-text mdfont">Email</label> <input type="text" class="uk-input required email profileInputs odd" name="email"> </div> <div class="uk-width-1-1@m uk-width-1-2@l top15 base15 right"> <label class="mdfont grey-text mdfont">Phone</label> <input type="text" class="uk-input required number profileInputs even" name="phone"> </div> <div class="uk-width-1-1 top15 base15"> <label class="mdfont grey-text mdfont">Comment</label> <textarea class="uk-input required" name="comment"></textarea> </div> <div class="uk-width-1-1 top15 base15"> <input type="submit" class="uk-button red darken-1 white-text strong left full top15" value="GIVE NOW"> </div> </div> </form> <div id="formHolder"></div> </div></div>
+        <div class="content" id="formControlHolder" data-is="paymentform2"><div class="paymentForm"> <form class="aceUIValidate" name="thePaymentForm" id="thePaymentForm" 
+            callback="initPayment"> <div class="banks"> 
+              
+                <!-- gtbank details -->
+                <div class="cover"></div> <img alt="" class="base15" src="/assets/img/gtb logo.png" width="70"> <input type="radio" name="bank" class="left full tcenter top5 radioPicker" value="3"> 
+                 <label class="left full smfont">GTPay</label> <label class="currencies tcenter left full smfont green-text text-darken-3">[  NGN ]</label> </div><div class="bank tcenter" 
+                 title="Xcel powered by Xcel"> <div class="cover"></div> <input type="radio" name="bank" 
+                 class="left full tcenter top5 radioPicker" value="10"> <label class="left full smfont"></label> <label class="currencies tcenter left full smfont green-text text-darken-3">[  NGN ]</label> 
+                </div>
+                <!-- paystack details -->
+                <div class="bank tcenter" title="Paystack powered by Paystack"> <div class="cover"></div> <img alt="" class="base15" src="/assets/img/paystack.png"> <input type="radio" name="bank" class="left full tcenter top5 radioPicker" value="11"> 
+                <label class="left full smfont">Paystack</label> <label class="currencies tcenter left full smfont green-text text-darken-3">[  NGN,  USD ]</label> </div><div class="bank tcenter" title="Covenant MFB powered by Paystack"> 
+                    <div class="cover"></div> <img alt="" class="base15" src="/assets/img/paypal logo.png"> <input type="radio" name="bank" class="left full tcenter top5 radioPicker" value="12"> <label class="left full smfont">PayPal</label> 
+                    <label class="currencies tcenter left full smfont green-text text-darken-3">[  NGN ]</label> </div> </div> <em class="smfont left full tcenter"> Please note, any of the listed channels can accept your card </em> 
+                    <div class="banksControl">  <div class="uk-width-1-4 left top15 base15 currencyHolder"> <label class="mdfont grey-text mdfont">Currency</label> <select class="required uk-select" name="currency"> <option selected="" disabled="" value="">
+                        Currency</option> <option value="1">Nigerian Naira</option><option value="2">United States Dollar</option><option value="3">Great Britain Pounds</option> </select> <input type="hidden" name="targetBank" id="targetBank" class="required number" 
+                        value="4"> </div> <div class="uk-width-3-4 top15 base15 amountHolder right"> <label class="mdfont grey-text mdfont">Amount</label> <input type="text" class="uk-input required number" name="amount"> </div> <div class="uk-width-1-1 top15 base15"> 
+                            <label class="mdfont grey-text mdfont">Offering Type</label> <select class="uk-select required" name="offering"> <option selected="" disabled="" value="">Select Offering Type</option> <option value="1">General Offering</option>
+                                <option value="2">Tithe</option><option value="3">Thanksgiving Offering</option><option value="4">Prophetic Offering</option><option value="5">Mission Adoption Scheme</option><option value="6">Church Planting</option><option value="7">
+                                    Church Building</option><option value="8">Rural Church Building</option><option value="9">Transport Offering</option> </select> </div> <div class="uk-width-1-1@m uk-width-1-2@l top15 base15 left"> <label class="mdfont grey-text mdfont">Firstname</label> <input type="text" class="uk-input required profileInputs odd" name="firstname"> </div> <div class="uk-width-1-1@m uk-width-1-2@l top15 base15 right"> <label class="mdfont grey-text mdfont">Lastname</label> <input type="text" class="uk-input required profileInputs even" name="lastname"> </div> <div class="uk-width-1-1@m uk-width-1-2@l top15 base15 left"> <label class="mdfont grey-text mdfont">Email</label> <input type="text" class="uk-input required email profileInputs odd" name="email"> </div> <div class="uk-width-1-1@m uk-width-1-2@l top15 base15 right"> <label class="mdfont grey-text mdfont">Phone</label> <input type="text" class="uk-input required number profileInputs even" name="phone"> </div> <div class="uk-width-1-1 top15 base15"> <label class="mdfont grey-text mdfont">Comment</label> <textarea class="uk-input required" name="comment"></textarea> </div> <div class="uk-width-1-1 top15 base15"> <input type="submit" class="uk-button red darken-1 white-text strong left full top15" value="GIVE NOW"> </div> </div> </form> <div id="formHolder"></div> </div></div>
     </div>
 
     <div class="sideBar">
@@ -17661,13 +17708,7 @@ block
                 <a href="#" data-group="topOptionGroup" data-content="object" data-index="1" class="menuAction openModal openContent">USSD</a>
                 <a href="#" data-group="topOptionGroup" data-content="object" data-index="2" class="menuAction openModal openContent">BANK TRANSFER</a>
             </div>
-            <br class="clear">
-            <br class="clear">
-            <div class="padd15 base15 white-text strong">
-                <span class="spanTitle">FOREX</span>
-                <a href="#" data-group="midOptionGroup" data-content="string" data-index="0" class="menuAction openModal openContent">TEXT TO GIVE</a>
-                <a href="#" data-group="midOptionGroup" data-content="string" data-index="1" class="menuAction openModal openContent">BANK TRANSFER</a>
-            </div>
+            
             <br class="clear">
             <br class="clear">
             <div class="padd15 base15 white-text strong">
