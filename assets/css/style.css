@@ -124,12 +124,15 @@ h6 {
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
-#header {
+.header {
   transition: all 0.5s;
   z-index: 997;
   padding: 20px 0;
 }
 
+h1 {
+  font-size: 30px;
+}
 #header.header-scrolled,
 #header.header-inner-pages {
   background: rgba(18, 18, 18, 0.8);
@@ -137,7 +140,7 @@ h6 {
 }
 
 #header .logo {
-  font-size: 25px;
+  font-size: 15px;
   margin: 0;
   padding: 0;
   line-height: 1;
@@ -147,12 +150,17 @@ h6 {
 }
 
 #header .logo a {
-  color: #ffffff;
+  color: #fdfdfd;
 }
 
 #header .logo img {
-  max-height: 40px;
+  max-height: 25px;
+  margin: 10px;
 }
+ h1 {
+  font-size: 20px;
+  color: white;
+ }
 
 /*--------------------------------------------------------------
 # Navigation Menu
@@ -160,10 +168,20 @@ h6 {
 /**
 * Desktop Navigation 
 */
+h1 {
+  font-size: 25px;
+  font-family: sans-serif;
+  margin-left: 20px;
+  font-weight: bold;
+}
 .navbar {
   padding: 0;
+  font-family: "poppin" sans-serif;
 }
-
+button {
+  margin: 10px;
+  font-family: "poppin" sans-serif;
+}
 .navbar ul {
   margin: 0;
   padding: 0;
@@ -174,20 +192,16 @@ h6 {
 
 .navbar li {
   position: relative;
+
 }
 
 .navbar>ul>li {
   padding: 10px 0 10px 24px;
 }
-/* search web */
 
 
-.search-web {
 
-  
-  
-}
-  
+
 
 
 .navbar a,
@@ -199,7 +213,7 @@ h6 {
   font-family: "Poppins", sans-serif;
   font-size: 15px;
   font-weight: 600;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(17, 1, 1, 0.7);
   white-space: nowrap;
   transition: 0.3s;
   position: relative;
@@ -338,7 +352,7 @@ h6 {
   line-height: 0;
   transition: 0.5s;
 }
-@media (min-width: 222px)
+
 @media (max-width: 991px) {
   .mobile-nav-toggle {
     display: menu;
@@ -441,11 +455,16 @@ h6 {
 .navbar-mobile .dropdown>.dropdown-active {
   display: block;
 }
-
+.Convention-info {
+  font-size: 20px;
+  color: red;
+  font-family: "poppin" sans-serif;
+}
 /*-------------/*
 
 # Hero Section
 --------------------------------------------------------------*/
+
 #hero {
   width: 100%;
   height: 100vh;
@@ -460,11 +479,11 @@ h6 {
 
 #hero h1 {
   margin: 0;
-   font-size: 40px;
-   font-family: "poppin" sans-serif;
+   font-size: 27px;
+   font-family: 'Gill Sans' sans-serif;
   font-weight: 700;
   
-  line-height: 60px;
+  line-height: 40px;
   color: #fff;
 }
 
