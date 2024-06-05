@@ -1,5 +1,5 @@
 /**
-* Template Name: Smart Tech
+* Template Name: reformation house
 * Updated: Mar 10 2023 with Bootstrap v5.2.3
 * Template URL: https://bootstrapmade.com/techie-free-skin-bootstrap-3/
 * Author: BootstrapMade.com
@@ -12,9 +12,11 @@
 body {
   font-family: "Open Sans", sans-serif;
   color: #1f1e1e;
+  
 }
 .container {
-  width: 90%;
+  width: 100%;
+  
 }
 a {
   color: #7f0bf3;
@@ -42,6 +44,7 @@ h4,
 h5,
 h6 {
   font-family: "Poppins", sans-serif;
+  
 }
 
 /*--------------------------------------------------------------
@@ -504,12 +507,14 @@ background-color: white;
 
 #hero h1 {
   margin: 0;
-   font-size: 27px;
+   font-size: 35px;
    font-family: 'Gill Sans' sans-serif;
   font-weight: 700;
+  text-transform: capitalize;
+  margin-bottom: 30px;
   
-  line-height: 40px;
-  color: #fff;
+  line-height: 60px;
+  color: #f8f9f8;
 }
 
 #hero h2 {

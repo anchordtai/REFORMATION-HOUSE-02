@@ -7,11 +7,9 @@
     <title>Log In Page</title>
     <meta content="" name="description" />
     <meta content="" name="keywords" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
-    rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
-    crossorigin="anonymous">
+    
     <!-- reCAPTCHA -->
-    <head>
+    <script src="https://cdn.tailwindcss.com"></script>
       <script src="https://www.google.com/recaptcha/enterprise.js?render=6LeQku8mAAAAAEaTUlYzMzwER629BaTCZI5ub0r-"></script>
       ...
     </head>
@@ -29,66 +27,114 @@
       }
     </script>
   </head>
-<h1>Sign In</h1>
+  <h1>Sign In</h1>
 
-<style>
-
-  h1 {
-    margin: 30px;
-    margin-left: 48%;
-  }
-  input[type=text], select {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-  }
+  <style>
   
-  input[type=submit] {
-    width: 15%;
-    
-    text-align: center;
-    background-color: #056008;
-    color: white;
-    padding: 10px 10px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  input[type=submit]:hover {
-    background-color: #c55d02;
-  }
-  
-  div {
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    padding: 20px;
-    width: 40%;
-    margin-left: 30%;
-    
+    h1 {
+      margin: 30px;
+      margin-left: 48%;
     }
-  </style>
-  </head> <body>
-  <div>
-    <form name="contact" netlify>
-        <form class="/identity/form/login" method="POST" action="/">
-          <h2>Login</h2>
-          <label for="email">Email</label>
-          <input type="email" id="Email" name="email" placeholder="Email.." required>
-         
-       <label for="password">Password</label>
-          <input type="password" id="password" name="Password" placeholder=" password.." required>
-         
-        <input type="submit" value="login">
-        </form>
-    </form>
-  </div>
+    input[type=text], select {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    
+    input[type=submit] {
+      width: 15%;
+      
+      text-align: center;
+      background-color: #056008;
+      color: white;
+      padding: 10px 10px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    input[type=submit]:hover {
+      background-color: #c55d02;
+    }
+    
+    div {
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 20px;
+      width: 40%;
+      margin-left: 30%;
+      
+      }
+    </style>
+    </head> <body>
+    <!--
+  This example requires some changes to your config:
   
-  </body>
-</html>
+  ```
+  // tailwind.config.js
+  module.exports = {
+    // ...
+    plugins: [
+      // ...
+      require('@tailwindcss/forms'),
+    ],
+  }
+  ```
+-->
+<!--
+  This example requires updating your template:
 
+  ```
+  <html class="h-full bg-white">
+  <body class="h-full">
+  ```
+-->
+<div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
+  <div class="sm:mx-auto sm:w-full sm:max-w-sm">
+    <img class="mx-auto h-10 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="Your Company">
+    <h2 class="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">Sign in to your account</h2>
+  </div>
+
+  <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+    <form class="space-y-6" action="#" method="POST">
+      <div>
+        <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Email address</label>
+        <div class="mt-2">
+          <input id="email" name="email" type="email" autocomplete="email" required class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+        </div>
+      </div>
+
+      <div>
+        <div class="flex items-center justify-between">
+          <label for="password" class="block text-sm font-medium leading-6 text-gray-900">Password</label>
+          <div class="text-sm">
+            <a href="#" class="font-semibold text-indigo-600 hover:text-indigo-500">Forgot password?</a>
+          </div>
+        </div>
+        <div class="mt-2">
+          <input id="password" name="password" type="password" autocomplete="current-password" required class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+        </div>
+      </div>
+
+      <div>
+        <button type="submit" class="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Sign in</button>
+      </div>
+    </form>
+
+    <p class="mt-10 text-center text-sm text-gray-500">
+      Not a member?
+      <a href="#" class="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">Start a 14 day free trial</a>
+    </p>
+  </div>
+</div>
+
+    
+    </body>
+  </html>
+  
+  
