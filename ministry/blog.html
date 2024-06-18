@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Church Blog - Christ's Reformation House International</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Roboto:300,400,500,700" rel="stylesheet" />
+    <style>
+        .max-h-60 {
+            max-height: 15rem;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+    <!-- Header -->
+    <header class="p-4 text-white bg-gray-800">
+        <div class="container flex items-center justify-between mx-auto">
+            <a href="/index.html" class="flex items-center">
+                <img class="w-20 h-15" src="assets/img/crhlogo.jpg" alt="logo" />
+                <span class="ml-3 text-xl">Christ's Reformation House</span>
+            </a>
+            <nav class="space-x-4">
+                <a href="/forms/contact.html" class="hover:text-gray-300">Contact Us</a>
+                <a href="/ministry/AboutUs.html" class="hover:text-gray-300">About Us</a>
+                <a href="https://flutterwave.com/pay/anchordtaiwoministries" class="px-4 py-2 bg-red-600 rounded-md hover:bg-red-700">Give Online</a>
+            </nav>
+            <div class="flex space-x-4">
+                <a href="/forms/log in.html">
+                    <button class="px-4 py-2 border border-white rounded-md hover:bg-white hover:text-gray-800">Login</button>
+                </a>
+                <a href="/forms/signup.html">
+                    <button class="px-4 py-2 bg-yellow-500 rounded-md hover:bg-yellow-600">Sign-up</button>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container p-4 mx-auto my-8">
+        <h1 class="mb-8 text-3xl font-bold">Church Blog</h1>
+        <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
+            <!-- Blog Card -->
+            <div class="overflow-hidden bg-white rounded-lg shadow-md">
+                <img src="https://via.placeholder.com/400x200" alt="Blog Image" class="object-cover w-full h-48">
+                <div class="p-4">
+                    <h2 class="mb-2 text-xl font-semibold">Blog Title 1</h2>
+                    <p class="mb-4 text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.</p>
+                    <div class="flex items-center justify-between">
+                        <button class="px-4 py-2 text-white bg-blue-500 rounded-md hover:bg-blue-600" onclick="openModal('blog1')">Read More</button>
+                        <div class="flex space-x-2">
+                            <button class="text-gray-600 hover:text-gray-800"><i class="fas fa-heart"></i></button>
+                            <button class="text-gray-600 hover:text-gray-800"><i class="fas fa-comment"></i></button>
+                            <button class="text-gray-600 hover:text-gray-800"><i class="fas fa-share"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Repeat Blog Cards for other blogs -->
+            <!-- Blog Card Template can be repeated 8 times with different content -->
+
+            <!-- Blog Card Example 2 -->
+            <div class="overflow-hidden bg-white rounded-lg shadow-md">
+                <img src="https://via.placeholder.com/400x200" alt="Blog Image" class="object-cover w-full h-48">
+                <div class="p-4">
+                    <h2 class="mb-2 text-xl font-semibold">Blog Title 2</h2>
+                    <p class="mb-4 text-gray-700">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <div class="flex items-center justify-between">
+                        <button class="px-4 py-2 text-white bg-blue-500 rounded-md hover:bg-blue-600" onclick="openModal('blog2')">Read More</button>
+                        <div class="flex space-x-2">
+                            <button class="text-gray-600 hover:text-gray-800"><i class="fas fa-heart"></i></button>
+                            <button class="text-gray-600 hover:text-gray-800"><i class="fas fa-comment"></i></button>
+                            <button class="text-gray-600 hover:text-gray-800"><i class="fas fa-share"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--blog 3-->
+            <div class="overflow-hidden bg-white rounded-lg shadow-md">
+              <img src="https://via.placeholder.com/400x200" alt="Blog Image" class="object-cover w-full h-48">
+              <div class="p-4">
+                  <h2 class="mb-2 text-xl font-semibold">Blog Title 2</h2>
+                  <p class="mb-4 text-gray-700">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <div class="flex items-center justify-between">
+                      <button class="px-4 py-2 text-white bg-blue-500 rounded-md hover:bg-blue-600" onclick="openModal('blog2')">Read More</button>
+                      <div class="flex space-x-2">
+                          <button class="text-gray-600 hover:text-gray-800"><i class="fas fa-heart"></i></button>
+                          <button class="text-gray-600 hover:text-gray-800"><i class="fas fa-comment"></i></button>
+                          <button class="text-gray-600 hover:text-gray-800"><i class="fas fa-share"></i></button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <!--blog 4-->
+          <div class="overflow-hidden bg-white rounded-lg shadow-md">
+            <img src="https://via.placeholder.com/400x200" alt="Blog Image" class="object-cover w-full h-48">
+            <div class="p-4">
+                <h2 class="mb-2 text-xl font-semibold">Blog Title 2</h2>
+                <p class="mb-4 text-gray-700">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <div class="flex items-center justify-between">
+                    <button class="px-4 py-2 text-white bg-blue-500 rounded-md hover:bg-blue-600" onclick="openModal('blog2')">Read More</button>
+                    <div class="flex space-x-2">
+                        <button class="text-gray-600 hover:text-gray-800"><i class="fas fa-heart"></i></button>
+                        <button class="text-gray-600 hover:text-gray-800"><i class="fas fa-comment"></i></button>
+                        <button class="text-gray-600 hover:text-gray-800"><i class="fas fa-share"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--blog 5-->
+        <div class="overflow-hidden bg-white rounded-lg shadow-md">
+          <img src="https://via.placeholder.com/400x200" alt="Blog Image" class="object-cover w-full h-48">
+          <div class="p-4">
+              <h2 class="mb-2 text-xl font-semibold">Blog Title 2</h2>
+              <p class="mb-4 text-gray-700">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              <div class="flex items-center justify-between">
+                  <button class="px-4 py-2 text-white bg-blue-500 rounded-md hover:bg-blue-600" onclick="openModal('blog2')">Read More</button>
+                  <div class="flex space-x-2">
+                      <button class="text-gray-600 hover:text-gray-800"><i class="fas fa-heart"></i></button>
+                      <button class="text-gray-600 hover:text-gray-800"><i class="fas fa-comment"></i></button>
+                      <button class="text-gray-600 hover:text-gray-800"><i class="fas fa-share"></i></button>
+                  </div>
+              </div>
+          </div>
+      </div>
+         <!--blog 6-->
+         <div class="overflow-hidden bg-white rounded-lg shadow-md">
+          <img src="https://via.placeholder.com/400x200" alt="Blog Image" class="object-cover w-full h-48">
+          <div class="p-4">
+              <h2 class="mb-2 text-xl font-semibold">Blog Title 2</h2>
+              <p class="mb-4 text-gray-700">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              <div class="flex items-center justify-between">
+                  <button class="px-4 py-2 text-white bg-blue-500 rounded-md hover:bg-blue-600" onclick="openModal('blog2')">Read More</button>
+                  <div class="flex space-x-2">
+                      <button class="text-gray-600 hover:text-gray-800"><i class="fas fa-heart"></i></button>
+                      <button class="text-gray-600 hover:text-gray-800"><i class="fas fa-comment"></i></button>
+                      <button class="text-gray-600 hover:text-gray-800"><i class="fas fa-share"></i></button>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!--blog 7-->
+      <div class="overflow-hidden bg-white rounded-lg shadow-md">
+        <img src="https://via.placeholder.com/400x200" alt="Blog Image" class="object-cover w-full h-48">
+        <div class="p-4">
+            <h2 class="mb-2 text-xl font-semibold">Blog Title 2</h2>
+            <p class="mb-4 text-gray-700">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <div class="flex items-center justify-between">
+                <button class="px-4 py-2 text-white bg-blue-500 rounded-md hover:bg-blue-600" onclick="openModal('blog2')">Read More</button>
+                <div class="flex space-x-2">
+                    <button class="text-gray-600 hover:text-gray-800"><i class="fas fa-heart"></i></button>
+                    <button class="text-gray-600 hover:text-gray-800"><i class="fas fa-comment"></i></button>
+                    <button class="text-gray-600 hover:text-gray-800"><i class="fas fa-share"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--blog 8-->
+    <div class="overflow-hidden bg-white rounded-lg shadow-md">
+      <img src="https://via.placeholder.com/400x200" alt="Blog Image" class="object-cover w-full h-48">
+      <div class="p-4">
+          <h2 class="mb-2 text-xl font-semibold">Blog Title 2</h2>
+          <p class="mb-4 text-gray-700">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <div class="flex items-center justify-between">
+              <button class="px-4 py-2 text-white bg-blue-500 rounded-md hover:bg-blue-600" onclick="openModal('blog2')">Read More</button>
+              <div class="flex space-x-2">
+                  <button class="text-gray-600 hover:text-gray-800"><i class="fas fa-heart"></i></button>
+                  <button class="text-gray-600 hover:text-gray-800"><i class="fas fa-comment"></i></button>
+                  <button class="text-gray-600 hover:text-gray-800"><i class="fas fa-share"></i></button>
+              </div>
+          </div>
+      </div>
+  </div> 
+            <!-- Repeat Blog Cards for other blogs -->
+            <!-- Blog Card Example 3 to 8 goes here -->
+
+        </div>
+    </main>
+
+    <!-- Modal -->
+    <div id="modal" class="fixed inset-0 z-50 flex items-center justify-center hidden bg-black bg-opacity-50">
+        <div class="max-w-lg p-8 overflow-auto bg-white rounded-lg">
+            <button class="absolute text-gray-600 top-4 right-4 hover:text-gray-800" onclick="closeModal()">&times;</button>
+            <h2 id="modalTitle" class="mb-4 text-2xl font-semibold"></h2>
+            <div id="modalContent" class="text-gray-700"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="p-4 text-center text-white bg-gray-800">
+        <div class="container mx-auto">
+            <p>&copy; 2024 Christ's Reformation House International Inc. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Modal -->
+    <script>
+        function openModal(blogId) {
+            const modal = document.getElementById('modal');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalContent = document.getElementById('modalContent');
+
+            if (!modal || !modalTitle || !modalContent) {
+                console.error('Modal elements not found.');
+                return;
+            }
+
+            modal.classList.remove('hidden');
+
+            // Example content for demonstration
+            if (blogId === 'blog1') {
+                modalTitle.textContent = 'Blog Title 1';
+                modalContent.innerHTML = `
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+                    <p>Suspendisse potenti. Duis feugiat lacus nec leo tristique.</p>
+                `;
+            } else if (blogId === 'blog2') {
+                modalTitle.textContent = 'Blog Title 2';
+                modalContent.innerHTML = `
+                    <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                `;
+            }
+            // Add more conditions for other blog IDs as needed
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('modal');
+            if (modal) {
+                modal.classList.add('hidden');
+            } else {
+                console.error('Modal element not found.');
+            }
+        }
+    </script>
+    <!-- Font Awesome CDN for icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
