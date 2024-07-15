@@ -9,10 +9,61 @@
   <!-- Google reCAPTCHA -->
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
+
+<!-- Header -->
+<header class="p-4 text-white bg-gray-800">
+  <div class="container flex flex-wrap items-center justify-between mx-auto">
+      <a href="/" class="flex items-center">
+          <img class="w-20 mb-2 h-13" src="../assets/img/crhlogo.jpg" alt="logo" />
+          <span class="ml-3 text-xl">Christ's Reformation House</span>
+      </a>
+      <nav class="flex space-x-4">
+          
+          <a href="../ministry/AboutUs.html" class="text-white hover:text-gray-300">About Us</a>
+          <a href="https://flutterwave.com/pay/anchordtaiwoministries" class="px-4 py-2 text-white bg-red-600 rounded-md hover:bg-red-700">Give Online</a>
+      </nav>
+      <form name="search" method="post" class="relative">
+          <input type="search" class="px-4 py-2 text-white placeholder-gray-400 bg-gray-700 border-0 rounded-md form-control form-control-dark focus:ring-2 focus:ring-blue-500 focus:outline-none" placeholder="Search..." aria-label="Search">
+      </form>
+      <div class="flex space-x-4">
+          <a href="../forms/log in.html">
+              <button type="button" class="px-4 py-2 text-white transition border border-white rounded-md hover:bg-white hover:text-gray-800">Login</button>
+          </a>
+          <a href="../forms/signup.html">
+              <button type="button" class="px-4 py-2 text-white transition bg-yellow-500 rounded-md hover:bg-yellow-600">Sign-up</button>
+          </a>
+      </div>
+  </div>
+</header>
+
+<!-- Navbar -->
+<div class="container px-2 mx-auto">
+  <nav class="bg-gray-200">
+      <div class="flex items-center justify-between px-8 py-4">
+          <a class="text-lg font-semibold text-gray-800 hover:text-gray-900" href="../ministry/daily-devotional.html">Devotional</a>
+
+          <!-- Mobile menu button -->
+          <button class="text-gray-800 lg:hidden hover:text-gray-900 focus:outline-none">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+              </svg>
+          </button>
+
+          <!-- Desktop menu items -->
+          <div class="hidden lg:flex lg:items-center lg:w-auto">
+              <a class="px-4 text-lg text-gray-800 hover:text-gray-900" href="../ministry/church-store.html">Online Store</a>
+              <a class="px-4 text-lg text-gray-800 hover:text-gray-900" href="../ministry/blog.html">Blog</a>
+              <a class="px-4 text-lg text-gray-800 hover:text-gray-900" href="../ministry/sermons.html">Sermons</a>
+          </div>
+      </div>
+  </nav>
+</div>
+<!-- End of Navbar -->
+  <!-- End Header -->
 <body class="bg-gray-100">
-  <div class="container mx-auto px-4 py-8">
-    <div class="max-w-lg mx-auto bg-white p-8 rounded-lg shadow-lg">
-      <h1 class="text-2xl font-bold mb-4 text-center">Contact Us</h1>
+  <div class="container px-4 py-8 mx-auto">
+    <div class="max-w-lg p-8 mx-auto bg-white rounded-lg shadow-lg">
+      <h1 class="mb-4 text-2xl font-bold text-center">Contact Us</h1>
 
       <form action="#" method="POST" class="space-y-4">
         <div>
@@ -36,10 +87,23 @@
         </div>
 
         <div class="text-center">
-          <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md transition duration-300 ease-in-out">Send Message</button>
+          <button type="submit" class="px-4 py-2 text-white transition duration-300 ease-in-out bg-blue-500 rounded-md hover:bg-blue-600">Send Message</button>
         </div>
       </form>
     </div>
   </div>
+
+  <!-- Footer Section -->
+  <footer class="py-6 text-center text-white bg-gray-800">
+    <p>&copy; 2024 Christ's Reformation House International Inc. All rights reserved.</p>
+    <div class="mt-4 social-icons">
+        <a href="https://web.facebook.com/profile.php?id=100069245150281" target="_blank" class="mx-2 text-2xl"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.twitter.com/yourchurch" target="_blank" class="mx-2 text-2xl"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/apostletaiwoanchord" target="_blank" class="mx-2 text-2xl"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.youtube.com/channel/UCgZv2cTsQy1IKHJqk2zQj7Q" target="_blank" class="mx-2 text-2xl"><i class="fab fa-youtube"></i></a>
+        <a href="https://wa.me/2348138463804" target="_blank" class="mx-2 text-2xl"><i class="fab fa-whatsapp"></i></a>
+    </div>
+</footer>
+
 </body>
 </html>

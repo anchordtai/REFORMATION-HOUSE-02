@@ -6,8 +6,8 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
     <title>Christ's Reformation House International</title>
-    <meta content="" name="description" />
-    <meta content="" name="keywords" />
+    <meta content="Church, Ministry, Christ, Worship" name="keywords" />
+    <meta content="Welcome to Christ's Reformation House International. Join us for worship and community events." name="description" />
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -17,7 +17,7 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet" />
     <!-- Tailwind CSS File -->
-    <link href="output.css" rel="stylesheet" />
+    <link href="styles.css" rel="stylesheet" />
     <!-- Scripture Reference -->
     <script src='https://www.blueletterbible.org/assets-v3/scripts/blbToolTip/BLB_ScriptTagger-min.js' type='text/javascript'></script>
     <script type='text/javascript'>
@@ -35,11 +35,11 @@
     <!-- Google reCAPTCHA -->
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     
-    <    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         .hero-bg {
-            background-image: url('assets/img/holyspirit.jpg');
+            background-image: url('/assets/img/holyspirit.jpg');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -54,10 +54,10 @@
         }
     </style>
 
+    
 </head>
 
-
-
+<body>
     <!-- Header -->
     <header class="p-4 text-white bg-gray-800">
         <div class="container flex flex-wrap items-center justify-between mx-auto">
@@ -65,11 +65,34 @@
                 <img class="w-20 mb-2 h-13" src="assets/img/crhlogo.jpg" alt="logo" />
                 <span class="ml-3 text-xl">Christ's Reformation House</span>
             </a>
-            <nav class="flex space-x-4">
+            <div class="hidden space-x-4 lg:flex">
+                <a class="text-lg font-semibold text-white hover:text-gray-300" href="ministry/daily-devotional.html">Devotional</a>
                 <a href="forms/contact.html" class="text-white hover:text-gray-300">Contact Us</a>
                 <a href="ministry/AboutUs.html" class="text-white hover:text-gray-300">About Us</a>
                 <a href="https://flutterwave.com/pay/anchordtaiwoministries" class="px-4 py-2 text-white bg-red-600 rounded-md hover:bg-red-700">Give Online</a>
-            </nav>
+            </div>
+            <form name="search" method="post" class="relative hidden lg:block">
+                <input type="search" class="px-4 py-2 text-white placeholder-gray-400 bg-gray-700 border-0 rounded-md form-control form-control-dark focus:ring-2 focus:ring-blue-500 focus:outline-none" placeholder="Search..." aria-label="Search">
+            </form>
+            <div class="hidden space-x-4 lg:flex">
+                <a href="forms/log in.html">
+                    <button type="button" class="px-4 py-2 text-white transition border border-white rounded-md hover:bg-white hover:text-gray-800">Login</button>
+                </a>
+                <a href="forms/signup.html">
+                    <button type="button" class="px-4 py-2 text-white transition bg-yellow-500 rounded-md hover:bg-yellow-600">Sign-up</button>
+                </a>
+            </div>
+            <button @click="open = !open" class="text-white lg:hidden">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+        <div x-show="open" class="flex flex-col mt-4 space-y-4 lg:hidden">
+            <a class="text-lg font-semibold text-white hover:text-gray-300" href="ministry/daily-devotional.html">Devotional</a>
+            <a href="forms/contact.html" class="text-white hover:text-gray-300">Contact Us</a>
+            <a href="ministry/AboutUs.html" class="text-white hover:text-gray-300">About Us</a>
+            <a href="https://flutterwave.com/pay/anchordtaiwoministries" class="px-4 py-2 text-white bg-red-600 rounded-md hover:bg-red-700">Give Online</a>
             <form name="search" method="post" class="relative">
                 <input type="search" class="px-4 py-2 text-white placeholder-gray-400 bg-gray-700 border-0 rounded-md form-control form-control-dark focus:ring-2 focus:ring-blue-500 focus:outline-none" placeholder="Search..." aria-label="Search">
             </form>
@@ -82,44 +105,32 @@
                 </a>
             </div>
         </div>
-
-<!--nav bar-->
-<div class="container  px-2 mx-auto">
-<nav class="bg-gray-200">
-  
-    <div class="flex items-center justify-between px-8 py-4">
-      <a class="text-lg font-semibold text-gray-800 hover:text-gray-900" href="ministry/daily-devotional.html">Devotional</a>
-
-      <!-- Mobile menu button -->
-      <button class="text-gray-800 lg:hidden hover:text-gray-900 focus:outline-none">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-        </svg>
-      </button>
-
-      <!-- Desktop menu items -->
-      <div class="hidden lg:flex lg:items-center lg:w-auto">
-        <a class="px-4 text-lg text-gray-800 hover:text-gray-900" href="ministry/church-store.html">Online Store</a>
-        <a class="px-4 text-lg text-gray-800 hover:text-gray-900" href="ministry/blog.html">Blog</a>
-        <a class="px-4 text-lg text-gray-800 hover:text-gray-900" href="ministry/sermons.html">Sermons</a>
-        
-        <!-- Dropdown menu -->
-        <!--<div class="relative inline-block group">
-          <button class="px-4 text-lg text-gray-800 hover:text-gray-900 focus:outline-none">
-            Our Ministry
-            <svg class="w-5 h-5 ml-2 transition-colors duration-300 group-hover:text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-            </svg>
-          </button> -->
-          
-        </div>
-      </div>
+    </header>
+    <!-- Navbar -->
+    <div class="container px-2 mx-auto">
+        <nav class="bg-gray-200">
+            <div class="flex items-center justify-between px-8 py-4">
+                <a class="text-lg font-semibold text-gray-800 hover:text-gray-900" href="ministry/daily-devotional.html">Devotional</a>
+                <!-- Mobile menu button -->
+                <button @click="menuOpen = !menuOpen" class="text-gray-800 lg:hidden hover:text-gray-900 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+                <!-- Desktop menu items -->
+                <div class="hidden lg:flex lg:items-center lg:w-auto">
+                    <a class="px-4 text-lg text-gray-800 hover:text-gray-900" href="ministry/blog.html">Blog</a>
+                    <a class="px-4 text-lg text-gray-800 hover:text-gray-900" href="ministry/sermons.html">Sermons</a>
+                </div>
+            </div>
+            <!-- Mobile menu items -->
+            <div x-show="menuOpen" class="lg:hidden">
+                <a class="block px-4 py-2 text-lg text-gray-800 hover:text-gray-900" href="ministry/blog.html">Blog</a>
+                <a class="block px-4 py-2 text-lg text-gray-800 hover:text-gray-900" href="ministry/sermons.html">Sermons</a>
+            </div>
+        </nav>
     </div>
-  </div>
-</nav>
-<!--end of navbar-->
-          
-        </header>
+    <!-- End of Navbar -->
         <!-- End Header -->
     
         <body class="font-sans antialiased">
@@ -127,12 +138,12 @@
           <section class="relative flex items-center justify-center h-screen text-white hero-bg animate-bg">
               <div class="absolute inset-0 bg-black bg-opacity-50"></div>
               <div class="relative z-10 p-6 text-center rounded-md">
-                <img src="assets/img/PHOTO ANCHORD_T.png" alt="hero-image" class="max-w-full mx-auto mb-6 mt-12 md:max-w-lg">
+                <img src="assets/img/PHOTO ANCHORD_T.png" alt="hero-image" class="max-w-full mx-auto mt-12 mb-6 md:max-w-lg">
                 <h1 class="mb-4 text-4xl font-bold leading-tight md:text-6xl">Welcome To A House Of Reformation</h1>
                   <p class="mb-1 text-lg md:text-2xl">Join us for worship and life transforming experience.</p>
                   <p class="mb-1 text-lg md:text-2xl">This is an apostolic ministry with the divine mandate to bring salvation, deliverance, freedom,</p>
                     <p class="mb-4 text-lg md:text-2xl">healing, and prosperity to lives, through the systematic teaching of the word of faith.</p>
-                  <a href="#our-mandate" class="inline-block px-6 py-3   text-lg font-bold text-white transition duration-300 bg-blue-500 rounded-lg hover:bg-blue-700">Discover More</a>
+                  <a href="#our-mandate" class="inline-block px-6 py-3 text-lg font-bold text-white transition duration-300 bg-blue-500 rounded-lg hover:bg-blue-700">Discover More</a>
               </div>
           </section>
       
@@ -218,14 +229,14 @@
           </section>
 
           <!--Testimonial Section-->
-          <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-            <h2 class="text-4xl font-extrabold text-gray-900 text-center">What Our Members Say</h2>
-            <p class="text-lg text-gray-600 text-center mt-4">Hear from our community about their experiences at our church.</p>
-            <div class="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+          <div class="px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-extrabold text-center text-gray-900">What Our Members Say</h2>
+            <p class="mt-4 text-lg text-center text-gray-600">Hear from our community about their experiences at our church.</p>
+            <div class="grid grid-cols-1 gap-8 mt-10 md:grid-cols-2 lg:grid-cols-2">
                 <!-- Testimonial 1 -->
-                <div class="bg-black p-6 rounded-lg shadow-lg">
+                <div class="p-6 bg-black rounded-lg shadow-lg">
                     <div class="flex items-center">
-                        <img class="h-16 w-16 rounded-full object-cover" src="https://via.placeholder.com/150" alt="Member 1">
+                        <img class="object-cover w-16 h-16 rounded-full" src="https://via.placeholder.com/150" alt="Member 1">
                         <div class="ml-4">
                             <h3 class="text-xl font-medium text-white">Emily Johnson</h3>
                             <p class="text-sm text-gray-400">Church Member</p>
@@ -235,9 +246,9 @@
                 </div>
         
                 <!-- Testimonial 2 -->
-                <div class="bg-black p-6 rounded-lg shadow-lg">
+                <div class="p-6 bg-black rounded-lg shadow-lg">
                     <div class="flex items-center">
-                        <img class="h-16 w-16 rounded-full object-cover" src="https://via.placeholder.com/150" alt="Member 2">
+                        <img class="object-cover w-16 h-16 rounded-full" src="https://via.placeholder.com/150" alt="Member 2">
                         <div class="ml-4">
                             <h3 class="text-xl font-medium text-white">James Ebere</h3>
                             <p class="text-sm text-gray-400">Volunteer</p>
@@ -247,9 +258,9 @@
                 </div>
         
                 <!-- Testimonial 3 -->
-                <div class="bg-black p-6 rounded-lg shadow-lg">
+                <div class="p-6 bg-black rounded-lg shadow-lg">
                     <div class="flex items-center">
-                        <img class="h-16 w-16 rounded-full object-cover" src="https://via.placeholder.com/150" alt="Member 3">
+                        <img class="object-cover w-16 h-16 rounded-full" src="https://via.placeholder.com/150" alt="Member 3">
                         <div class="ml-4">
                             <h3 class="text-xl font-medium text-white">Sarah Williams</h3>
                             <p class="text-sm text-gray-400">Choir Member</p>
@@ -259,9 +270,9 @@
                 </div>
         
                 <!-- Testimonial 4 -->
-                <div class="bg-black p-6 rounded-lg shadow-lg">
+                <div class="p-6 bg-black rounded-lg shadow-lg">
                     <div class="flex items-center">
-                        <img class="h-16 w-16 rounded-full object-cover" src="https://via.placeholder.com/150" alt="Member 4">
+                        <img class="object-cover w-16 h-16 rounded-full" src="https://via.placeholder.com/150" alt="Member 4">
                         <div class="ml-4">
                             <h3 class="text-xl font-medium text-white">David Hassan</h3>
                             <p class="text-sm text-gray-400">Youth Group Leader</p>
@@ -272,6 +283,9 @@
             </div>
         </div>
         <!--end of Testimonial-->
+
+        
+  
       
           <!-- Footer Section -->
           <footer class="py-6 text-center text-white bg-gray-800">
@@ -285,58 +299,52 @@
               </div>
           </footer>
 
-          <!-- Modal -->
-    <div id="modal" class="fixed inset-0 z-50 flex items-center justify-center hidden bg-black bg-opacity-50">
-      <div class="max-w-lg p-8 overflow-auto bg-white rounded-lg">
-          <button class="absolute text-gray-600 top-4 right-4 hover:text-gray-800" onclick="closeModal()">&times;</button>
-          <h2 id="modalTitle" class="mb-4 text-2xl font-semibold"></h2>
-          <div id="modalContent" class="text-gray-700"></div>
-      </div>
-  </div>
+    
+<!--pop up modal-->
+<!-- Popup Container -->
+<div id="popupContainer" class="fixed flex items-center justify-center hidden bg-white border border-gray-300 rounded-lg shadow-lg top-20 right-4 w-60 h-100">
+    <!-- Popup Content -->
+    <div class="p-4">
+        <!-- Close Button -->
+        <button id="closePopup" class="absolute text-gray-600 top-2 right-2 hover:text-gray-900">
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </button>
+        <!-- Popup Content -->
+        <h2 class="mb-2 text-lg font-semibold">Event Registration</h2>
+        <img src="dtl-image.png" alt="Event Image" class="mb-2 rounded-lg">
+        <p class="mb-2 text-sm">Join us for an exciting event! Register now to secure your spot.</p>
+        <!-- Registration Button -->
+        <a href="https://forms.gle/k5fxGYied7zoyR5n6" target="_blank" rel="noopener noreferrer" class="inline-block px-4 py-2 font-semibold text-white bg-blue-500 rounded-lg hover:bg-blue-600">Register Now</a>
+    </div>
+</div>
+<!--javascript for header-->
+<script>
+    document.addEventListener('alpine:init', () => {
+        Alpine.data('dropdown', () => ({
+            open: false,
+            menuOpen: false,
+        }))
+    })
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Show the popup after homepage finishes loading
+        document.getElementById('popupContainer').classList.remove('hidden');
 
-  
+        // Add blinking effect to the popup
+        setInterval(function () {
+            var popup = document.getElementById('popupContainer');
+            popup.classList.toggle('opacity-0');
+        }, 1000); // Blink every 1 second (1000ms)
+        
+        // Close popup when close button is clicked
+        document.getElementById('closePopup').addEventListener('click', function () {
+            document.getElementById('popupContainer').classList.add('hidden');
+        });
+    });
+</script>
 
-  <!-- JavaScript for Modal -->
-  <script>
-      function openModal(blogId) {
-          const modal = document.getElementById('modal');
-          const modalTitle = document.getElementById('modalTitle');
-          const modalContent = document.getElementById('modalContent');
-
-          if (!modal || !modalTitle || !modalContent) {
-              console.error('Modal elements not found.');
-              return;
-          }
-
-          modal.classList.remove('hidden');
-
-          // Example content for demonstration
-          if (blogId === 'blog1') {
-              modalTitle.textContent = 'Blog Title 1';
-              modalContent.innerHTML = `
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
-                  <p>Suspendisse potenti. Duis feugiat lacus nec leo tristique.</p>
-              `;
-          } else if (blogId === 'blog2') {
-              modalTitle.textContent = 'Blog Title 2';
-              modalContent.innerHTML = `
-                  <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-                  <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-              `;
-          }
-          // Add more conditions for other blog IDs as needed
-      }
-
-      function closeModal() {
-          const modal = document.getElementById('modal');
-          if (modal) {
-              modal.classList.add('hidden');
-          } else {
-              console.error('Modal element not found.');
-          }
-      }
-  </script>
-  <!-- Font Awesome CDN for icons -->
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-      </body>
+</body>
 </html>
