@@ -59,27 +59,30 @@
 
 <body>
     <!-- Header -->
-    <header class="p-4 text-white bg-gray-800">
-        <div class="container flex flex-wrap items-center justify-between mx-auto">
-            <a href="index.html" class="flex items-center">
-                <img class="w-20 mb-2 h-13" src="assets/img/crhlogo.jpg" alt="logo" />
-                <span class="ml-3 text-xl">Christ's Reformation House</span>
-            </a>
-            <div class="hidden space-x-4 lg:flex">
-                <a class="text-lg font-semibold text-white hover:text-gray-300" href="ministry/daily-devotional.html">Devotional</a>
-                <a href="forms/contact.html" class="text-white hover:text-gray-300">Contact Us</a>
-                <a href="ministry/AboutUs.html" class="text-white hover:text-gray-300">About Us</a>
-                <a href="https://flutterwave.com/pay/anchordtaiwoministries" class="px-4 py-2 text-white bg-red-600 rounded-md hover:bg-red-700">Give Online</a>
+    <header class="text-white bg-gray-800">
+        <div class="container flex items-center justify-between p-4 mx-auto">
+            <div class="flex items-center">
+                <img class="w-20 h-20" src="assets/img/crhlogo.jpg" alt="logo" />
+                <span class="ml-3 text-xl font-bold">Christ's Reformation House</span>
             </div>
-            <form name="search" method="post" class="relative hidden lg:block">
-                <input type="search" class="px-4 py-2 text-white placeholder-gray-400 bg-gray-700 border-0 rounded-md form-control form-control-dark focus:ring-2 focus:ring-blue-500 focus:outline-none" placeholder="Search..." aria-label="Search">
-            </form>
-            <div class="hidden space-x-4 lg:flex">
+            <nav class="hidden space-x-6 lg:flex">
+                <a href="ministry/daily-devotional.html" class="text-lg font-semibold hover:text-gray-300">Devotional</a>
+                <a href="ministry/AboutUs.html" class="text-lg font-semibold hover:text-gray-300">Blog</a>
+                <a href="ministry/AboutUs.html" class="text-lg font-semibold hover:text-gray-300">Online Stores</a>
+                <a href="ministry/AboutUs.html" class="text-lg font-semibold hover:text-gray-300">Sermons</a>
+                <a href="forms/contact.html" class="text-lg font-semibold hover:text-gray-300">Contact Us</a>
+                <a href="ministry/AboutUs.html" class="text-lg font-semibold hover:text-gray-300">About Us</a>
+                <a href="https://flutterwave.com/pay/anchordtaiwoministries" class="px-4 py-2 bg-red-600 rounded-md hover:bg-red-700">Give Online</a>
+            </nav>
+            <div class="items-center hidden space-x-4 lg:flex">
+                <form name="search" method="post" class="relative">
+                    <input type="search" class="px-4 py-2 text-white placeholder-gray-400 bg-gray-700 border-0 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none" placeholder="Search..." aria-label="Search">
+                </form>
                 <a href="forms/log in.html">
-                    <button type="button" class="px-4 py-2 text-white transition border border-white rounded-md hover:bg-white hover:text-gray-800">Login</button>
+                    <button type="button" class="px-4 py-2 border border-white rounded-md hover:bg-white hover:text-gray-800">Login</button>
                 </a>
                 <a href="forms/signup.html">
-                    <button type="button" class="px-4 py-2 text-white transition bg-yellow-500 rounded-md hover:bg-yellow-600">Sign-up</button>
+                    <button type="button" class="px-4 py-2 bg-yellow-500 rounded-md hover:bg-yellow-600">Sign-up</button>
                 </a>
             </div>
             <button @click="open = !open" class="text-white lg:hidden">
@@ -88,50 +91,29 @@
                 </svg>
             </button>
         </div>
-        <div x-show="open" class="flex flex-col mt-4 space-y-4 lg:hidden">
-            <a class="text-lg font-semibold text-white hover:text-gray-300" href="ministry/daily-devotional.html">Devotional</a>
-            <a href="forms/contact.html" class="text-white hover:text-gray-300">Contact Us</a>
-            <a href="ministry/AboutUs.html" class="text-white hover:text-gray-300">About Us</a>
-            <a href="https://flutterwave.com/pay/anchordtaiwoministries" class="px-4 py-2 text-white bg-red-600 rounded-md hover:bg-red-700">Give Online</a>
-            <form name="search" method="post" class="relative">
-                <input type="search" class="px-4 py-2 text-white placeholder-gray-400 bg-gray-700 border-0 rounded-md form-control form-control-dark focus:ring-2 focus:ring-blue-500 focus:outline-none" placeholder="Search..." aria-label="Search">
-            </form>
-            <div class="flex space-x-4">
-                <a href="forms/log in.html">
-                    <button type="button" class="px-4 py-2 text-white transition border border-white rounded-md hover:bg-white hover:text-gray-800">Login</button>
-                </a>
-                <a href="forms/signup.html">
-                    <button type="button" class="px-4 py-2 text-white transition bg-yellow-500 rounded-md hover:bg-yellow-600">Sign-up</button>
-                </a>
-            </div>
+        <div x-data="{ open: false }" x-show="open" class="lg:hidden">
+            <nav class="flex flex-col p-4 space-y-4 bg-gray-800">
+                <a href="ministry/daily-devotional.html" class="text-lg font-semibold hover:text-gray-300">Devotional</a>
+                <a href="forms/contact.html" class="text-lg font-semibold hover:text-gray-300">Contact Us</a>
+                <a href="ministry/AboutUs.html" class="text-lg font-semibold hover:text-gray-300">About Us</a>
+                <a href="https://flutterwave.com/pay/anchordtaiwoministries" class="px-4 py-2 bg-red-600 rounded-md hover:bg-red-700">Give Online</a>
+                <form name="search" method="post" class="relative">
+                    <input type="search" class="px-4 py-2 text-white placeholder-gray-400 bg-gray-700 border-0 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none" placeholder="Search..." aria-label="Search">
+                </form>
+                <div class="flex space-x-4">
+                    <a href="forms/log in.html">
+                        <button type="button" class="px-4 py-2 border border-white rounded-md hover:bg-white hover:text-gray-800">Login</button>
+                    </a>
+                    <a href="forms/signup.html">
+                        <button type="button" class="px-4 py-2 bg-yellow-500 rounded-md hover:bg-yellow-600">Sign-up</button>
+                    </a>
+                </div>
+            </nav>
         </div>
     </header>
-    <!-- Navbar -->
-    <div class="container px-2 mx-auto">
-        <nav class="bg-gray-200">
-            <div class="flex items-center justify-between px-8 py-4">
-                <a class="text-lg font-semibold text-gray-800 hover:text-gray-900" href="ministry/daily-devotional.html">Devotional</a>
-                <!-- Mobile menu button -->
-                <button @click="menuOpen = !menuOpen" class="text-gray-800 lg:hidden hover:text-gray-900 focus:outline-none">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-                    </svg>
-                </button>
-                <!-- Desktop menu items -->
-                <div class="hidden lg:flex lg:items-center lg:w-auto">
-                    <a class="px-4 text-lg text-gray-800 hover:text-gray-900" href="ministry/blog.html">Blog</a>
-                    <a class="px-4 text-lg text-gray-800 hover:text-gray-900" href="ministry/sermons.html">Sermons</a>
-                </div>
-            </div>
-            <!-- Mobile menu items -->
-            <div x-show="menuOpen" class="lg:hidden">
-                <a class="block px-4 py-2 text-lg text-gray-800 hover:text-gray-900" href="ministry/blog.html">Blog</a>
-                <a class="block px-4 py-2 text-lg text-gray-800 hover:text-gray-900" href="ministry/sermons.html">Sermons</a>
-            </div>
-        </nav>
-    </div>
-    <!-- End of Navbar -->
         <!-- End Header -->
+
+       
     
         <body class="font-sans antialiased">
           <!-- Hero Section -->
@@ -319,15 +301,7 @@
         <a href="https://forms.gle/k5fxGYied7zoyR5n6" target="_blank" rel="noopener noreferrer" class="inline-block px-4 py-2 font-semibold text-white bg-blue-500 rounded-lg hover:bg-blue-600">Register Now</a>
     </div>
 </div>
-<!--javascript for header-->
-<script>
-    document.addEventListener('alpine:init', () => {
-        Alpine.data('dropdown', () => ({
-            open: false,
-            menuOpen: false,
-        }))
-    })
-</script>
+
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         // Show the popup after homepage finishes loading
@@ -344,6 +318,17 @@
             document.getElementById('popupContainer').classList.add('hidden');
         });
     });
+
+
+     //javascript for header-->
+
+    document.addEventListener('alpine:init', () => {
+        Alpine.data('dropdown', () => ({
+            open: false,
+            menuOpen: false,
+        }))
+    })
+
 </script>
 
 </body>
