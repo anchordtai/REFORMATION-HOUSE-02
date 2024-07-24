@@ -6,13 +6,16 @@
   <title>Contact Us</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@^2.0/dist/tailwind.min.css" rel="stylesheet">
   <link href="output.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
   <!-- Google reCAPTCHA -->
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body class="bg-gray-100">
-  <div class="container mx-auto px-4 py-8">
-    <div class="max-w-lg mx-auto bg-white p-8 rounded-lg shadow-lg">
-      <h1 class="text-2xl font-bold mb-4 text-center">Contact Us</h1>
+
+  
+  <div class="container px-4 py-8 mx-auto">
+    <div class="max-w-lg p-8 mx-auto bg-white rounded-lg shadow-lg">
+      <h1 class="mb-4 text-2xl font-bold text-center">Contact Us</h1>
 
       <form action="#" method="POST" class="space-y-4">
         <div>
@@ -29,16 +32,16 @@
           <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
           <textarea id="message" name="message" rows="4" required placeholder="Your message" class="w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></textarea>
         </div>
-
+      </form>
         <!-- Google reCAPTCHA -->
         <div class="mt-4">
           <div class="g-recaptcha" data-sitekey="YOUR_RECAPTCHA_SITE_KEY"></div>
         </div>
 
         <div class="text-center">
-          <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md transition duration-300 ease-in-out">Send Message</button>
+          <button type="submit" class="px-4 py-2 text-white transition duration-300 ease-in-out bg-blue-500 rounded-md hover:bg-blue-600">Send Message</button>
         </div>
-      </form>
+     
     </div>
   </div>
 </body>

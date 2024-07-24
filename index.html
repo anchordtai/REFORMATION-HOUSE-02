@@ -59,7 +59,7 @@
 
 
     <!-- Header -->
-    <header class="p-4 text-white bg-gray-800">
+    <header class="sticky top-0 z-50 text-white bg-gray-800">
         <div class="container flex flex-wrap items-center justify-between mx-auto">
             <a href="index.html" class="flex items-center">
                 <img class="w-20 mb-2 h-13" src="assets/img/crhlogo.jpg" alt="logo" />
@@ -84,7 +84,7 @@
         </div>
 
 <!--nav bar-->
-<div class="container  px-2 mx-auto">
+<div class="container px-2 mx-auto">
 <nav class="bg-gray-200">
   
     <div class="flex items-center justify-between px-8 py-4">
@@ -127,15 +127,85 @@
           <section class="relative flex items-center justify-center h-screen text-white hero-bg animate-bg">
               <div class="absolute inset-0 bg-black bg-opacity-50"></div>
               <div class="relative z-10 p-6 text-center rounded-md">
-                <img src="assets/img/PHOTO ANCHORD_T.png" alt="hero-image" class="max-w-full mx-auto mb-6 mt-12 md:max-w-lg">
-                <h1 class="mb-4 text-4xl font-bold leading-tight md:text-6xl">Welcome To A House Of Reformation</h1>
-                  <p class="mb-1 text-lg md:text-2xl">Join us for worship and life transforming experience.</p>
-                  <p class="mb-1 text-lg md:text-2xl">This is an apostolic ministry with the divine mandate to bring salvation, deliverance, freedom,</p>
-                    <p class="mb-4 text-lg md:text-2xl">healing, and prosperity to lives, through the systematic teaching of the word of faith.</p>
-                  <a href="#our-mandate" class="inline-block px-6 py-3   text-lg font-bold text-white transition duration-300 bg-blue-500 rounded-lg hover:bg-blue-700">Discover More</a>
+                <img src="assets/img/PHOTO ANCHORD_T.png" alt="hero-image" class="max-w-full mx-auto mt-12 mb-6 md:max-w-lg">
+                <h1 class="mb-4 text-4xl font-bold leading-tight md:text-2xl">Welcome To A House Of Reformation</h1>
+                  <p class="mb-1 text-lg md:text-1xl">Join us for worship and life transforming experience.</p>
+                  
+                  <a href="#our-mandate" class="inline-block px-6 py-3 text-lg font-bold text-white transition duration-300 bg-blue-500 rounded-lg hover:bg-blue-700">Discover More</a>
               </div>
           </section>
-      
+    
+      <!-- Event Section -->
+<section class="py-12 bg-white">
+    <div class="container px-6 mx-auto">
+        <div class="flex flex-wrap items-center justify-center">
+            <div class="w-full md:w-1/2">
+                <a href="ministry/event-page.html" class="block w-full">
+                <img src="assets/img/convention-image.jpg" alt="Destiny Lifting Convention 2024" class="w-full h-auto rounded-lg shadow-md">
+                </a>
+            </div>
+            <div class="w-full mt-8 md:w-1/2 md:pl-10 md:mt-0">
+                <h2 class="text-3xl font-bold text-gray-800">Destiny Lifting Convention 2024</h2>
+                <p class="mt-4 text-lg text-gray-600">Join us for an unforgettable event of spiritual upliftment and empowerment. Experience powerful teachings, worship sessions, and much more.</p>
+                <p class="mt-4 text-lg text-gray-600">Date: Mon August 19th- Sunday 25th 2024.</p>
+                <div class="mt-6">
+                    <a href="ministry/event-page.html" class="px-6 py-3 text-white bg-blue-600 rounded-md hover:bg-blue-700">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--News-->
+<main class="container p-4 mx-auto">
+    <section id="current-blog-post" class="grid grid-cols-1 gap-6 p-6 bg-white rounded-lg shadow-md md:grid-cols-3">
+        <h2 class="col-span-3 text-2xl font-bold text-center">Today's News</h2>
+        
+        <!-- Daily Blog Post -->
+        <article class="p-4 bg-gray-100 rounded-lg shadow">
+            <a href="assets/blog/blog.html" class="block w-full">
+            <img src="" alt="Blog Post Image" class="object-cover w-full h-48 rounded-md">
+            </a>
+            <h3 class="mt-4 text-xl font-semibold">Blog Post Title 1</h3>
+            <p class="mt-2 text-gray-600">Brief description of the blog post content. This is where the summary goes...</p>
+            <div class="flex justify-center mt-4">
+                <a href="assets/blog/blog.html" class="block w-full">
+                    <button class="w-full px-4 py-2 text-white bg-blue-600 rounded-md hover:bg-blue-700">Read More</button>
+                </a>
+            </div>
+        </article>
+
+        <!-- Daily Devotional -->
+        <article class="p-4 bg-gray-100 rounded-lg shadow">
+            <a href="assets/devotional/devotional.html" class="block w-full">
+            <img src="assets/img/devotional-image.jpg" alt="daily-devotional-Image" class="object-cover w-full h-48 rounded-md">
+            </a>
+            <h3 class="mt-4 text-xl font-semibold">Daily Devotional</h3>
+            <p class="mt-2 text-gray-600">Brief description of the blog post content. This is where the summary goes...</p>
+            <div class="flex justify-center mt-4">
+                <a href="assets/devotional/devotional.html" class="block w-full">
+                    <button class="w-full px-4 py-2 text-white bg-blue-600 rounded-md hover:bg-blue-700">Read More</button>
+                </a>
+            </div>
+        </article>
+
+        <!-- Blog Post 3 -->
+        <article class="p-4 bg-gray-100 rounded-lg shadow">
+            <a href="ministry/RHBC.html" class="block w-full">
+            <img src="path/to/your/image3.jpg" alt="Blog Post Image" class="object-cover w-full h-48 rounded-md">
+            </a>
+            <h3 class="mt-4 text-xl font-semibold">Reformation House Bible College</h3>
+            <p class="mt-2 text-gray-600">Brief description of the blog post content. This is where the summary goes...</p>
+            <div class="flex justify-center mt-4">
+                <a href="ministry/RHBC.html" class="block w-full">
+                    <button class="w-full px-4 py-2 text-white bg-blue-600 rounded-md hover:bg-blue-700">Read More</button>
+                </a>
+            </div>
+        </article>
+    </section>
+</main>
+
+
           <!-- Content Sections -->
           <section id="our-mandate" class="py-16 text-center bg-gray-100">
               <h2 class="mb-8 text-3xl font-bold md:text-4xl">Our Mandate</h2>
@@ -143,6 +213,7 @@
                 <p class="mb-2 text-lg md:text-xl">unveiling the mysteries of God's Kingdom through the revelation knowledge of God's word.</p>
               <!-- Add more content about services here -->
                
+              
               <!-- our services 1 -->
               <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
                 <!-- Blog Card 1 -->
@@ -218,14 +289,14 @@
           </section>
 
           <!--Testimonial Section-->
-          <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-            <h2 class="text-4xl font-extrabold text-gray-900 text-center">What Our Members Say</h2>
-            <p class="text-lg text-gray-600 text-center mt-4">Hear from our community about their experiences at our church.</p>
-            <div class="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+          <div class="px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-extrabold text-center text-gray-900">What Our Members Say</h2>
+            <p class="mt-4 text-lg text-center text-gray-600">Hear from our community about their experiences at our church.</p>
+            <div class="grid grid-cols-1 gap-8 mt-10 md:grid-cols-2 lg:grid-cols-2">
                 <!-- Testimonial 1 -->
-                <div class="bg-black p-6 rounded-lg shadow-lg">
+                <div class="p-6 bg-black rounded-lg shadow-lg">
                     <div class="flex items-center">
-                        <img class="h-16 w-16 rounded-full object-cover" src="https://via.placeholder.com/150" alt="Member 1">
+                        <img class="object-cover w-16 h-16 rounded-full" src="https://via.placeholder.com/150" alt="Member 1">
                         <div class="ml-4">
                             <h3 class="text-xl font-medium text-white">Emily Johnson</h3>
                             <p class="text-sm text-gray-400">Church Member</p>
@@ -235,9 +306,9 @@
                 </div>
         
                 <!-- Testimonial 2 -->
-                <div class="bg-black p-6 rounded-lg shadow-lg">
+                <div class="p-6 bg-black rounded-lg shadow-lg">
                     <div class="flex items-center">
-                        <img class="h-16 w-16 rounded-full object-cover" src="https://via.placeholder.com/150" alt="Member 2">
+                        <img class="object-cover w-16 h-16 rounded-full" src="https://via.placeholder.com/150" alt="Member 2">
                         <div class="ml-4">
                             <h3 class="text-xl font-medium text-white">James Ebere</h3>
                             <p class="text-sm text-gray-400">Volunteer</p>
@@ -247,9 +318,9 @@
                 </div>
         
                 <!-- Testimonial 3 -->
-                <div class="bg-black p-6 rounded-lg shadow-lg">
+                <div class="p-6 bg-black rounded-lg shadow-lg">
                     <div class="flex items-center">
-                        <img class="h-16 w-16 rounded-full object-cover" src="https://via.placeholder.com/150" alt="Member 3">
+                        <img class="object-cover w-16 h-16 rounded-full" src="https://via.placeholder.com/150" alt="Member 3">
                         <div class="ml-4">
                             <h3 class="text-xl font-medium text-white">Sarah Williams</h3>
                             <p class="text-sm text-gray-400">Choir Member</p>
@@ -259,9 +330,9 @@
                 </div>
         
                 <!-- Testimonial 4 -->
-                <div class="bg-black p-6 rounded-lg shadow-lg">
+                <div class="p-6 bg-black rounded-lg shadow-lg">
                     <div class="flex items-center">
-                        <img class="h-16 w-16 rounded-full object-cover" src="https://via.placeholder.com/150" alt="Member 4">
+                        <img class="object-cover w-16 h-16 rounded-full" src="https://via.placeholder.com/150" alt="Member 4">
                         <div class="ml-4">
                             <h3 class="text-xl font-medium text-white">David Hassan</h3>
                             <p class="text-sm text-gray-400">Youth Group Leader</p>
@@ -338,5 +409,6 @@
   </script>
   <!-- Font Awesome CDN for icons -->
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-      </body>
+  <script src="homeBlog.js"></script>      
+</body>
 </html>
