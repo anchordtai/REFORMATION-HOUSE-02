@@ -105,32 +105,6 @@
                 </a>
             </div>
         </div>
-<<<<<<< HEAD
-    </header>
-    <!-- Navbar -->
-    <div class="container px-2 mx-auto">
-        <nav class="bg-gray-200">
-            <div class="flex items-center justify-between px-8 py-4">
-                <a class="text-lg font-semibold text-gray-800 hover:text-gray-900" href="ministry/daily-devotional.html">Devotional</a>
-                <!-- Mobile menu button -->
-                <button @click="menuOpen = !menuOpen" class="text-gray-800 lg:hidden hover:text-gray-900 focus:outline-none">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-                    </svg>
-                </button>
-                <!-- Desktop menu items -->
-                <div class="hidden lg:flex lg:items-center lg:w-auto">
-                    <a class="px-4 text-lg text-gray-800 hover:text-gray-900" href="ministry/blog.html">Blog</a>
-                    <a class="px-4 text-lg text-gray-800 hover:text-gray-900" href="ministry/sermons.html">Sermons</a>
-                </div>
-            </div>
-            <!-- Mobile menu items -->
-            <div x-show="menuOpen" class="lg:hidden">
-                <a class="block px-4 py-2 text-lg text-gray-800 hover:text-gray-900" href="ministry/blog.html">Blog</a>
-                <a class="block px-4 py-2 text-lg text-gray-800 hover:text-gray-900" href="ministry/sermons.html">Sermons</a>
-            </div>
-        </nav>
-=======
 
 <!--nav bar-->
 <div class="container px-2 mx-auto">
@@ -163,7 +137,6 @@
           
         </div>
       </div>
->>>>>>> recovery-branch
     </div>
     <!-- End of Navbar -->
         <!-- End Header -->
@@ -452,51 +425,5 @@
     });
 </script>
 
-<<<<<<< HEAD
-=======
-  <!-- JavaScript for Modal -->
-  <script>
-      function openModal(blogId) {
-          const modal = document.getElementById('modal');
-          const modalTitle = document.getElementById('modalTitle');
-          const modalContent = document.getElementById('modalContent');
-
-          if (!modal || !modalTitle || !modalContent) {
-              console.error('Modal elements not found.');
-              return;
-          }
-
-          modal.classList.remove('hidden');
-
-          // Example content for demonstration
-          if (blogId === 'blog1') {
-              modalTitle.textContent = 'Blog Title 1';
-              modalContent.innerHTML = `
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
-                  <p>Suspendisse potenti. Duis feugiat lacus nec leo tristique.</p>
-              `;
-          } else if (blogId === 'blog2') {
-              modalTitle.textContent = 'Blog Title 2';
-              modalContent.innerHTML = `
-                  <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-                  <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-              `;
-          }
-          // Add more conditions for other blog IDs as needed
-      }
-
-      function closeModal() {
-          const modal = document.getElementById('modal');
-          if (modal) {
-              modal.classList.add('hidden');
-          } else {
-              console.error('Modal element not found.');
-          }
-      }
-  </script>
-  <!-- Font Awesome CDN for icons -->
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-  <script src="homeBlog.js"></script>      
->>>>>>> recovery-branch
 </body>
 </html>
