@@ -59,10 +59,10 @@
 
 <body>
     <!-- Header -->
-    <header class="text-white bg-gray-800">
+    <header class="fixed top-0 left-0 right-0 z-50 text-white bg-gray-800">
         <div class="container flex items-center justify-between p-4 mx-auto">
             <div class="flex items-center">
-                <img class="w-20 h-20" src="assets/img/crhlogo.jpg" alt="logo" />
+                <img class="h-10 w-15" src="assets/img/crhlogo.jpg" alt="logo" />
                 <span class="ml-3 text-xl font-bold">Christ's Reformation House</span>
             </div>
             <nav class="hidden space-x-6 lg:flex">
@@ -72,7 +72,7 @@
                 <a href="ministry/AboutUs.html" class="text-lg font-semibold hover:text-gray-300">Sermons</a>
                 <a href="forms/contact.html" class="text-lg font-semibold hover:text-gray-300">Contact Us</a>
                 <a href="ministry/AboutUs.html" class="text-lg font-semibold hover:text-gray-300">About Us</a>
-                <a href="https://flutterwave.com/pay/anchordtaiwoministries" class="px-4 py-2 bg-red-600 rounded-md hover:bg-red-700">Give Online</a>
+                <a href="forms/donate.html" class="px-4 py-2 bg-red-600 rounded-md hover:bg-red-700">Give Online</a>
             </nav>
             <div class="items-center hidden space-x-4 lg:flex">
                 <form name="search" method="post" class="relative">
@@ -96,7 +96,7 @@
                 <a href="ministry/daily-devotional.html" class="text-lg font-semibold hover:text-gray-300">Devotional</a>
                 <a href="forms/contact.html" class="text-lg font-semibold hover:text-gray-300">Contact Us</a>
                 <a href="ministry/AboutUs.html" class="text-lg font-semibold hover:text-gray-300">About Us</a>
-                <a href="https://flutterwave.com/pay/anchordtaiwoministries" class="px-4 py-2 bg-red-600 rounded-md hover:bg-red-700">Give Online</a>
+                <a href="forms/donate.html" class="px-4 py-2 bg-red-600 rounded-md hover:bg-red-700">Give Online</a>
                 <form name="search" method="post" class="relative">
                     <input type="search" class="px-4 py-2 text-white placeholder-gray-400 bg-gray-700 border-0 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none" placeholder="Search..." aria-label="Search">
                 </form>
@@ -113,9 +113,13 @@
     </header>
         <!-- End Header -->
 
-       
-    
+       <!--daily bible verse-->
+        <div id="daily-verse">
+            <script src="https://dailyverses.net/get/w.php?d=&l=en" async defer></script>
+        </div>
         <body class="font-sans antialiased">
+<!--end of daily bible verse-->
+            
           <!-- Hero Section -->
           <section class="relative flex items-center justify-center h-screen text-white hero-bg animate-bg">
               <div class="absolute inset-0 bg-black bg-opacity-50"></div>

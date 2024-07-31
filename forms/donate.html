@@ -1,171 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-
-    <title>Christ's Reformation House International</title>
-    <meta content="" name="description" />
-    <meta content="" name="keywords" />
-
-    <!-- Tailwind CSS CDN -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate - Christ's Reformation House International</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Favicons -->
-    <link href="assets/img/crhlogo.jpg" rel="icon" />
-    <link href="assets/img/crhlogo.jpg" rel="apple-touch-icon" />
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet" />
-    <!-- Tailwind CSS File -->
-    <link href="output.css" rel="stylesheet" />
-    <!-- Scripture Reference -->
-    <script src='https://www.blueletterbible.org/assets-v3/scripts/blbToolTip/BLB_ScriptTagger-min.js' type='text/javascript'></script>
-    <script type='text/javascript'>
-        // Additional settings
-        BLB.Tagger.Translation = 'NKJV';
-        BLB.Tagger.HyperLinks = 'all'; // 'all', 'none', 'hover'
-        BLB.Tagger.HideTanslationAbbrev = false;
-        BLB.Tagger.TargetNewWindow = true;
-        BLB.Tagger.Style = 'par'; // 'line' or 'par'
-        BLB.Tagger.NoSearchTagNames = ''; // HTML element list
-        BLB.Tagger.NoSearchClassNames = 'noTag doNotTag'; // CSS class list
-    </script>
-    <!-- End of Scripture Reference -->
-
-    <!-- Google reCAPTCHA -->
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
-
 <body class="bg-gray-100">
-    <!-- Header -->
     <header class="p-4 text-white bg-gray-800">
-        <div class="container flex flex-wrap items-center justify-between mx-auto">
-            <a href="/index.html" class="flex items-center">
-                <img class="w-20 h-15" src="assets/img/crhlogo.jpg" alt="logo" />
+        <div class="container flex items-center justify-between mx-auto">
+            <a href="index.html" class="flex items-center">
+                <img class="w-20 mb-2 h-13" src="../assets/img/crhlogo.jpg" alt="logo" />
                 <span class="ml-3 text-xl">Christ's Reformation House</span>
             </a>
-            <nav class="flex space-x-4">
-                <a href="/forms/donate.html" class="text-white hover:text-gray-300">Contact Us</a>
-                <a href="/ministry/AboutUs.html" class="text-white hover:text-gray-300">About Us</a>
-                <a href="https://flutterwave.com/pay/anchordtaiwoministries" class="px-4 py-2 text-white bg-red-600 rounded-md hover:bg-red-700">Give Online</a>
+            <nav class="space-x-4">
+                <a href="forms/contact.html" class="text-white hover:text-gray-300">Contact Us</a>
+                <a href="ministry/AboutUs.html" class="text-white hover:text-gray-300">About Us</a>
+               
             </nav>
-            <form name="search" method="post" class="relative">
-                <input type="search" class="px-4 py-2 text-white placeholder-gray-400 bg-gray-700 border-0 rounded-md form-control form-control-dark focus:ring-2 focus:ring-blue-500 focus:outline-none" placeholder="Search..." aria-label="Search">
+        </div>
+    </header>
+
+    <main class="flex items-center justify-center min-h-screen">
+        <div class="w-full max-w-lg p-8 bg-white rounded-lg shadow-lg">
+            <h2 class="mb-6 text-2xl font-bold text-center">Donate to Christ's Reformation House</h2>
+            <form id="donation-form" class="space-y-4">
+                <div>
+                    <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+                    <input type="text" id="name" name="name" required class="w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50">
+                </div>
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                    <input type="email" id="email" name="email" required class="w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50">
+                </div>
+                <div>
+                    <label for="country" class="block text-sm font-medium text-gray-700">Country</label>
+                    <input type="text" id="country" name="country" required class="w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50">
+                </div>
+                <div>
+                    <label for="state" class="block text-sm font-medium text-gray-700">State</label>
+                    <input type="text" id="state" name="state" required class="w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50">
+                </div>
+                <div>
+                    <label for="address" class="block text-sm font-medium text-gray-700">Address</label>
+                    <input type="text" id="address" name="address" required class="w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50">
+                </div>
+                <div>
+                    <label for="donationType" class="block text-sm font-medium text-gray-700">Type of Donation</label>
+                    <select id="donationType" name="donationType" required class="w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50">
+                        <option value="Tithe">Tithe</option>
+                        <option value="Offering">Offering</option>
+                        <option value="Evangelism">Evangelism</option>
+                        <option value="Building">Building</option>
+                        <option value="Mission">Mission</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="amount" class="block text-sm font-medium text-gray-700">Amount</label>
+                    <input type="number" id="amount" name="amount" required class="w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50">
+                </div>
+                <div>
+                    <label for="currency" class="block text-sm font-medium text-gray-700">Currency</label>
+                    <select id="currency" name="currency" required class="w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50">
+                        <option value="USD">USD</option>
+                        <option value="NGN">NGN</option>
+                        <option value="EUR">EUR</option>
+                        <!-- Add more currencies as needed -->
+                    </select>
+                </div>
+                <div class="text-center">
+                    <button type="button" onclick="makeDonation()" class="px-6 py-3 text-white bg-blue-600 rounded-md hover:bg-blue-700">Submit</button>
+                </div>
             </form>
-            <div class="flex space-x-4">
-                <a href="/forms/log in.html">
-                    <button type="button" class="px-4 py-2 text-white transition border border-white rounded-md hover:bg-white hover:text-gray-800">Login</button>
-                </a>
-                <a href="/forms/signup.html">
-                    <button type="button" class="px-4 py-2 text-white transition bg-yellow-500 rounded-md hover:bg-yellow-600">Sign-up</button>
-                </a>
-            </div>
         </div>
-    
+    </main>
 
-  
-  
-</header>
+    <footer class="p-4 text-center text-white bg-gray-800">
+        <p>&copy; 2024 Christ's Reformation House International. All rights reserved.</p>
+    </footer>
 
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="/ministry/daily-devotional.html">Devotional</a>
-    <a class="navbar-brand" href="/ministry/church-store.html">Online Store</a>
-    <a class="navbar-brand" href="/ministry/blog.html">Blog</a>
-    <a class="navbar-brand" href="/sermon.html">Sermons</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="mb-2 navbar-nav me-auto mb-lg-0">
-        <li class="nav-item">
-          
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="/ministry.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-          Our Ministry  </a>
-        
-        <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="/ministry.html">Children Ministry</a></li>
-            <li><a class="dropdown-item" href="/ministry.html">Youth Ministry</a></li>
-            <li><a class="dropdown-item" href="/ministry.html">Teen Ministry</a></li>
-            <li><a class="dropdown-item" href="/ministry.html">Prison Ministry</a></li>
-            <li><hr class="dropdown-divider"></li>
-            
-          </ul>
-        
-        <!-- <li class="nav-item">
-          <a class="nav-link" href="#">About</a> -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Online Church</a>
-           
-          <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="https://mixlr.com/christs-reformation-house-radio">Online Radio</a></li>
-              <li><a class="dropdown-item" href="index.html">Reformed Tv</a></li>
-              <li><a class="dropdown-item" href="index.html">Believers Truimphant Life</a></li>
-              <li><a class="dropdown-item" href="#"> Destiny Lifting Convention</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#"></a></li>
-            </ul>
-        </li>
-        
-            
-          </a>
-        
+    <script src="https://checkout.flutterwave.com/v3.js"></script>
+    <script>
+        function makeDonation() {
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var amount = document.getElementById('amount').value;
+            var currency = document.getElementById('currency').value;
+            var country = document.getElementById('country').value;
+            var state = document.getElementById('state').value;
+            var address = document.getElementById('address').value;
+            var donationType = document.getElementById('donationType').value;
 
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="https://mixlr.com/christs-reformation-house-radio"
-             role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Bible Study
-            </a>
-          <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="https://mixlr.com/christs-reformation-house-radio">Bible Encyclopedia</a></li>
-              <li><a class="dropdown-item" href="sign in.html">Grace Impart Conference</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#"></a></li>
-            </ul>
-        </li>
-        <!-- <a href="#"><button class="btn btn-danger">Give Online</button></a> -->
-      </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
-    </div>
-  </div>
-</nav>
-<body class="bg-gray-100">
-  <div class="container px-4 py-8 mx-auto">
-    <div class="max-w-md p-8 mx-auto bg-white rounded shadow-md">
-      <h1 class="mb-4 text-2xl font-bold text-center">Make a Donation</h1>
+            console.log("Name:", name);
+            console.log("Email:", email);
+            console.log("Amount:", amount);
+            console.log("Currency:", currency);
+            console.log("Country:", country);
+            console.log("State:", state);
+            console.log("Address:", address);
+            console.log("Donation Type:", donationType);
 
-      <form action="https://flutterwave.com/pay/anchordtaiwoministries" method="POST" class="space-y-4">
-        <div>
-          <label for="name" class="block text-sm font-medium text-gray-700">Full Name</label>
-          <input type="text" id="name" name="name" required placeholder="Your full name" class="w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50">
-        </div>
-
-        <div>
-          <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
-          <input type="email" id="email" name="email" required placeholder="Your email address" class="w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50">
-        </div>
-
-        <div>
-          <label for="amount" class="block text-sm font-medium text-gray-700">Donation Amount ($)</label>
-          <input type="number" id="amount" name="amount" required placeholder="Enter amount" class="w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50">
-        </div>
-
-        <div>
-          <label for="message" class="block text-sm font-medium text-gray-700">Message (optional)</label>
-          <textarea id="message" name="message" rows="3" placeholder="Leave a message (optional)" class="w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></textarea>
-        </div>
-
-        <div class="text-center">
-          <button type="submit" class="px-4 py-2 text-white transition duration-300 ease-in-out bg-blue-500 rounded-md hover:bg-blue-600">Donate Now</button>
-        </div>
-      </form>
-    </div>
-  </div>
+            FlutterwaveCheckout({
+                public_key: "YOUR_PUBLIC_KEY_HERE",
+                tx_ref: "REF_" + Math.floor((Math.random() * 1000000000) + 1),
+                amount: amount,
+                currency: currency,
+                payment_options: "card, mobilemoneyghana, ussd",
+                redirect_url: "https://your-website.com/payment-success",
+                meta: {
+                    consumer_id: email,
+                    consumer_mac: name,
+                    country: country,
+                    state: state,
+                    address: address,
+                    donation_type: donationType
+                },
+                customer: {
+                    email: email,
+                    phone_number: "08102909304",
+                    name: name
+                },
+                customizations: {
+                    title: "Christ's Reformation House Donation",
+                    description: `Support our ministry (${donationType})`,
+                    logo: "https://your-website.com/logo.png"
+                }
+            });
+        }
+    </script>
 </body>
 </html>
