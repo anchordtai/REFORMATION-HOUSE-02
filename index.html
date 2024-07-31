@@ -31,8 +31,10 @@
         BLB.Tagger.NoSearchClassNames = 'noTag doNotTag'; // CSS class list
     </script>
     <!-- End of Scripture Reference -->
-
-    <!-- Google reCAPTCHA -->
+<!--Alpine.js for toggle behavior-->
+<script src="https://cdn.jsdelivr.net/npm/alpinejs@3.5.2/dist/cdn.min.js" defer></script>
+    
+<!-- Google reCAPTCHA -->
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
@@ -59,7 +61,7 @@
 
 <body>
     <!-- Header -->
-    <header class="fixed top-0 left-0 right-0 z-50 text-white bg-gray-800">
+    <header class="fixed top-0 left-0 right-0 z-50 text-white bg-gray-800" x-data="{ open: false }">
         <div class="container flex items-center justify-between p-4 mx-auto">
             <div class="flex items-center">
                 <img class="h-10 w-15" src="assets/img/crhlogo.jpg" alt="logo" />
@@ -67,12 +69,12 @@
             </div>
             <nav class="hidden space-x-6 lg:flex">
                 <a href="ministry/daily-devotional.html" class="text-lg font-semibold hover:text-gray-300">Devotional</a>
-                <a href="ministry/AboutUs.html" class="text-lg font-semibold hover:text-gray-300">Blog</a>
-                <a href="ministry/AboutUs.html" class="text-lg font-semibold hover:text-gray-300">Online Stores</a>
                 <a href="ministry/AboutUs.html" class="text-lg font-semibold hover:text-gray-300">Sermons</a>
                 <a href="forms/contact.html" class="text-lg font-semibold hover:text-gray-300">Contact Us</a>
                 <a href="ministry/AboutUs.html" class="text-lg font-semibold hover:text-gray-300">About Us</a>
-                <a href="forms/donate.html" class="px-4 py-2 bg-red-600 rounded-md hover:bg-red-700">Give Online</a>
+                <a href="forms/donate.html">
+                    <button type="button" class="px-4 py-2 bg-red-500 rounded-md hover:bg-red-700">Give Online</button>
+                </a>
             </nav>
             <div class="items-center hidden space-x-4 lg:flex">
                 <form name="search" method="post" class="relative">
@@ -91,12 +93,15 @@
                 </svg>
             </button>
         </div>
-        <div x-data="{ open: false }" x-show="open" class="lg:hidden">
+        <div x-show="open" class="lg:hidden">
             <nav class="flex flex-col p-4 space-y-4 bg-gray-800">
                 <a href="ministry/daily-devotional.html" class="text-lg font-semibold hover:text-gray-300">Devotional</a>
+                <a href="ministry/AboutUs.html" class="text-lg font-semibold hover:text-gray-300">Sermons</a>
                 <a href="forms/contact.html" class="text-lg font-semibold hover:text-gray-300">Contact Us</a>
                 <a href="ministry/AboutUs.html" class="text-lg font-semibold hover:text-gray-300">About Us</a>
-                <a href="forms/donate.html" class="px-4 py-2 bg-red-600 rounded-md hover:bg-red-700">Give Online</a>
+                <a href="forms/donate.html">
+                    <button type="button" class="px-4 py-2 bg-red-500 rounded-md hover:bg-red-700">Give Online</button>
+                </a>
                 <form name="search" method="post" class="relative">
                     <input type="search" class="px-4 py-2 text-white placeholder-gray-400 bg-gray-700 border-0 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none" placeholder="Search..." aria-label="Search">
                 </form>
@@ -111,6 +116,9 @@
             </nav>
         </div>
     </header>
+    
+        
+    </header>
         <!-- End Header -->
 
        <!--daily bible verse-->
@@ -124,9 +132,9 @@
           <section class="relative flex items-center justify-center h-screen text-white hero-bg animate-bg">
               <div class="absolute inset-0 bg-black bg-opacity-50"></div>
               <div class="relative z-10 p-6 text-center rounded-md">
-                <img src="assets/img/PHOTO ANCHORD_T.png" alt="hero-image" class="max-w-full mx-auto mt-12 mb-6 md:max-w-lg">
-                <h1 class="mb-4 text-4xl font-bold leading-tight md:text-2xl">Welcome To A House Of Reformation</h1>
-                  <p class="mb-1 text-lg md:text-1xl">Join us for worship and life transforming experience.</p>
+                <img src="assets/img/PHOTO ANCHORD_T.png" alt="hero-image" class="max-w-full mx-auto mt-28 mb-6 md:max-w-lg">
+                <h1 class="mb-4 text-3xl font-bold leading-tight md:text-2xl">"Welcome to Christ's Reformation House - Where Faith Meets Transformation." </h1>
+                  
                   
                   <a href="#our-mandate" class="inline-block px-6 py-3 text-lg font-bold text-white transition duration-300 bg-blue-500 rounded-lg hover:bg-blue-700">Discover More</a>
               </div>
@@ -155,13 +163,13 @@
 
 <!--News-->
 <main class="container p-4 mx-auto">
-    <section id="current-blog-post" class="grid grid-cols-1 gap-6 p-6 bg-white rounded-lg shadow-md md:grid-cols-3">
-        <h2 class="col-span-3 text-2xl font-bold text-center">Today's News</h2>
+    <section id="current-blog-post" class="grid grid-cols-1 gap-6 p-6 bg-white rounded-lg shadow-md sm:grid-cols-2 lg:grid-cols-4">
+        <h2 class="col-span-1 sm:col-span-2 lg:col-span-4 text-2xl font-bold text-center">Today's News</h2>
         
         <!-- Daily Blog Post -->
         <article class="p-4 bg-gray-100 rounded-lg shadow">
             <a href="assets/blog/blog.html" class="block w-full">
-            <img src="" alt="Blog Post Image" class="object-cover w-full h-48 rounded-md">
+                <img src="path/to/your/blog-image1.jpg" alt="Blog Post Image 1" class="object-cover w-full h-48 rounded-md">
             </a>
             <h3 class="mt-4 text-xl font-semibold">Blog Post Title 1</h3>
             <p class="mt-2 text-gray-600">Brief description of the blog post content. This is where the summary goes...</p>
@@ -175,10 +183,10 @@
         <!-- Daily Devotional -->
         <article class="p-4 bg-gray-100 rounded-lg shadow">
             <a href="assets/devotional/devotional.html" class="block w-full">
-            <img src="assets/img/devotional-image.jpg" alt="daily-devotional-Image" class="object-cover w-full h-48 rounded-md">
+                <img src="assets/img/devotional-image.jpg" alt="Daily Devotional Image" class="object-cover w-full h-48 rounded-md">
             </a>
             <h3 class="mt-4 text-xl font-semibold">Daily Devotional</h3>
-            <p class="mt-2 text-gray-600">Brief description of the blog post content. This is where the summary goes...</p>
+            <p class="mt-2 text-gray-600">Brief description of the daily devotional content. This is where the summary goes...</p>
             <div class="flex justify-center mt-4">
                 <a href="assets/devotional/devotional.html" class="block w-full">
                     <button class="w-full px-4 py-2 text-white bg-blue-600 rounded-md hover:bg-blue-700">Read More</button>
@@ -189,10 +197,24 @@
         <!-- Blog Post 3 -->
         <article class="p-4 bg-gray-100 rounded-lg shadow">
             <a href="ministry/RHBC.html" class="block w-full">
-            <img src="path/to/your/image3.jpg" alt="Blog Post Image" class="object-cover w-full h-48 rounded-md">
+                <img src="path/to/your/blog-image3.jpg" alt="Blog Post Image 3" class="object-cover w-full h-48 rounded-md">
             </a>
             <h3 class="mt-4 text-xl font-semibold">Reformation House Bible College</h3>
-            <p class="mt-2 text-gray-600">Brief description of the blog post content. This is where the summary goes...</p>
+            <p class="mt-2 text-gray-600">Brief description of the Bible College content. This is where the summary goes...</p>
+            <div class="flex justify-center mt-4">
+                <a href="ministry/RHBC.html" class="block w-full">
+                    <button class="w-full px-4 py-2 text-white bg-blue-600 rounded-md hover:bg-blue-700">Read More</button>
+                </a>
+            </div>
+        </article>
+
+        <!-- Blog Post 4 -->
+        <article class="p-4 bg-gray-100 rounded-lg shadow">
+            <a href="ministry/RHBC.html" class="block w-full">
+                <img src="path/to/your/blog-image4.jpg" alt="Blog Post Image 4" class="object-cover w-full h-48 rounded-md">
+            </a>
+            <h3 class="mt-4 text-xl font-semibold">Reformation House Bible College</h3>
+            <p class="mt-2 text-gray-600">Brief description of the Bible College content. This is where the summary goes...</p>
             <div class="flex justify-center mt-4">
                 <a href="ministry/RHBC.html" class="block w-full">
                     <button class="w-full px-4 py-2 text-white bg-blue-600 rounded-md hover:bg-blue-700">Read More</button>
@@ -346,64 +368,65 @@
       
           <!-- Footer Section -->
           <footer class="py-6 text-center text-white bg-gray-800">
-              <p>&copy; 2024 Christ's Reformation House International Inc. All rights reserved.</p>
-              <div class="mt-4 social-icons">
-                  <a href="https://web.facebook.com/profile.php?id=100069245150281" target="_blank" class="mx-2 text-2xl"><i class="fab fa-facebook-f"></i></a>
-                  <a href="https://www.twitter.com/yourchurch" target="_blank" class="mx-2 text-2xl"><i class="fab fa-twitter"></i></a>
-                  <a href="https://www.instagram.com/apostletaiwoanchord" target="_blank" class="mx-2 text-2xl"><i class="fab fa-instagram"></i></a>
-                  <a href="https://www.youtube.com/channel/UCgZv2cTsQy1IKHJqk2zQj7Q" target="_blank" class="mx-2 text-2xl"><i class="fab fa-youtube"></i></a>
-                  <a href="https://wa.me/2348138463804" target="_blank" class="mx-2 text-2xl"><i class="fab fa-whatsapp"></i></a>
-              </div>
-          </footer>
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-4">
+                    <!-- Email -->
+                    <div class="flex flex-col items-center md:items-start">
+                        <h2 class="text-lg font-bold mb-2">Email Us</h2>
+                        <a href="mailto:info@christreformationhouse.org.ng" class="text-gray-400 hover:text-gray-300">info@christreformationhouse.org.ng</a>
+                    </div>
+                    <!-- Address -->
+                    <div class="flex flex-col items-center md:items-start">
+                        <h2 class="text-lg font-bold mb-2">Address</h2>
+                        <p class="text-gray-400">No 8 Rainbow Street Ayegbami, Sagamu, Ogun State, Nigeria</p>
+                    </div>
+                    <!-- Phone -->
+                    <div class="flex flex-col items-center md:items-start">
+                        <h2 class="text-lg font-bold mb-2">Phone</h2>
+                        <p class="text-gray-400">+2348138463804, +2348122223840</p>
+                    </div>
+                    <!-- Google Map -->
+                    <div class="flex flex-col items-center md:items-start">
+                        <h2 class="text-lg font-bold mb-2">Find Us Here</h2>
+                        <div class="w-full h-48 md:h-64">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.0198705546164!2d-122.
+                                40641718468276!3d37.785120979757084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!
+                                1s0x8085809c5bcb4205%3A0x78c9e4e58e3d8a7e!2s123%20Church%20St%2C%20San%20Francisco%2
+                                C%20CA%2094102%2C%20USA!5e0!3m2!1sen!2s!4v1614031941258!5m2!1sen!2s" 
+                                width="100%" 
+                                height="100%" 
+                                frameborder="0" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                aria-hidden="false" 
+                                tabindex="0">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <p>&copy; 2024 Christ's Reformation House International Inc. All rights reserved.</p>
+                    <div class="mt-4 social-icons">
+                        <a href="https://web.facebook.com/profile.php?id=100069245150281" target="_blank" class="mx-2 text-2xl"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.twitter.com/yourchurch" target="_blank" class="mx-2 text-2xl"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/apostletaiwoanchord" target="_blank" class="mx-2 text-2xl"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/channel/UCgZv2cTsQy1IKHJqk2zQj7Q" target="_blank" class="mx-2 text-2xl"><i class="fab fa-youtube"></i></a>
+                        <a href="https://wa.me/2348138463804" target="_blank" class="mx-2 text-2xl"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
 
-    
-<!--pop up modal-->
-<!-- Popup Container -->
-<div id="popupContainer" class="fixed flex items-center justify-center hidden bg-white border border-gray-300 rounded-lg shadow-lg top-20 right-4 w-60 h-100">
-    <!-- Popup Content -->
-    <div class="p-4">
-        <!-- Close Button -->
-        <button id="closePopup" class="absolute text-gray-600 top-2 right-2 hover:text-gray-900">
-            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-            </svg>
-        </button>
-        <!-- Popup Content -->
-        <h2 class="mb-2 text-lg font-semibold">Event Registration</h2>
-        <img src="dtl-image.png" alt="Event Image" class="mb-2 rounded-lg">
-        <p class="mb-2 text-sm">Join us for an exciting event! Register now to secure your spot.</p>
-        <!-- Registration Button -->
-        <a href="https://forms.gle/k5fxGYied7zoyR5n6" target="_blank" rel="noopener noreferrer" class="inline-block px-4 py-2 font-semibold text-white bg-blue-500 rounded-lg hover:bg-blue-600">Register Now</a>
-    </div>
-</div>
+    <script>
+    //javascript for header-->
 
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        // Show the popup after homepage finishes loading
-        document.getElementById('popupContainer').classList.remove('hidden');
+     const menuButton = document.getElementById('menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
 
-        // Add blinking effect to the popup
-        setInterval(function () {
-            var popup = document.getElementById('popupContainer');
-            popup.classList.toggle('opacity-0');
-        }, 1000); // Blink every 1 second (1000ms)
-        
-        // Close popup when close button is clicked
-        document.getElementById('closePopup').addEventListener('click', function () {
-            document.getElementById('popupContainer').classList.add('hidden');
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
         });
-    });
-
-
-     //javascript for header-->
-
-    document.addEventListener('alpine:init', () => {
-        Alpine.data('dropdown', () => ({
-            open: false,
-            menuOpen: false,
-        }))
-    })
-
 </script>
 
 </body>
